@@ -12,7 +12,7 @@ Pro Eintrag erfassen wir Herkunft, erhofften Nutzen, kleinsten sinnvollen Test u
 
 | ID | Idee / Herkunft | Nutzen / kleinster Test | Stand |
 | --- | --- | --- | --- |
-| I-001 | Geschäftsleiter als liebevoll ironische Bosse. **Nutzeridee.** | Wiedererkennbarer Alltagshumor; zuerst eine konkrete Person und typische Situation beschreiben, dann ein einziges lesbares Muster ausprobieren. | Idee; Figurenbriefing offen |
+| I-001 | Geschäftsleiter als liebevoll ironische Bosse. **Nutzeridee.** | Erstes Figurenbriefing und Foto erhalten; lokal in private/ gesichert. Vorschlag: freundlichen Feierabendplausch mit einem einzigen angekündigten Folienmuster testen. | Konkreter lokaler Entwurf; Mechanik noch nicht bestätigt |
 | I-002 | Sprüche passend zum Ereignis statt hauptsächlich zufällig. **Entwicklungsvorschlag auf Grundlage der gelieferten Sprüche.** | Die Pointe trifft: „Seite 2“ zur Preisliste, „Containerschiff“ zur Lieferzeit. Kleiner Test mit drei Ereignissen und Sprechpausen. | Vorschlag für 0.2/0.3 |
 | I-003 | „Nur ganz kurz“-Kunden kündigen eine Nachfrage sichtbar an. **Entwicklungsvorschlag.** | Eine erkennbare Entscheidung statt nur mehr Geschwindigkeit oder Beratungsbedarf. Ein Kundentyp mit Vorwarnung; testen, ob man sein Verhalten ohne Erklärung versteht. | Vorschlag für 0.2 |
 | I-004 | Tor-Floß am Kanal. **Vorheriger Entwicklungsvorschlag, vom Nutzer grundsätzlich positiv aufgenommen.** | Verbindet Originalspruch, Produkt und Reise. Erst in einer einfachen Probe klären, ob Steuern und Helfen auf dem Floß Spaß machen. | Kandidat für Kapitel 2, kein fertiges Konzept |
@@ -20,6 +20,8 @@ Pro Eintrag erfassen wir Herkunft, erhofften Nutzen, kleinsten sinnvollen Test u
 | I-006 | IHAAS-Erleuchtung: die sichtbare Glühbirne zeigt die Lösung. **Vorheriger Entwicklungsvorschlag zum Originalspruch.** | Verständliche Pointe und gezielte Aufgabe. Test mit einer markierten Lösung statt unlesbarer Sucherei. | Idee für spätere Etappe |
 | I-007 | Fähigkeitskombination „Seite 2 + Erfahrung“ erklärt den Preis gleich mit. **Entwicklungsvorschlag.** | Zwei Ausrüstungsentscheidungen verändern ein Muster sichtbar; erst prüfen, ob die vorhandenen Einzelwerkzeuge bereits unterscheidbar sind. | Parkplatz nach 0.2 |
 | I-008 | Waltrop wird beim Ankommen Schritt für Schritt warm und freundlich. **Nutzerwelt + Entwicklungsvorschlag für die Umsetzung.** | Die Heimreise erhält eine fühlbare Belohnung. Erst ein kurzer spielbarer Übergang; keine lange Filmsequenz vorab. | Kandidat für Kapitel 3 |
+| I-009 | Auf dem iPhone als App starten. **Nutzerwunsch; Web-App als Entwicklungsempfehlung.** | Home-Bildschirm-Symbol und eigener App-Modus ohne Apple-Entwicklergebühr; zuerst Installation und gespeicherten Fortschritt auf echtem iPhone prüfen. Offline und Updates als eigene Aufgabe. | Plattformvergleich in PLATTFORMEN.md; noch nicht umgesetzt |
+| I-010 | KI-Idee hilft beim langen Chefgespräch. **Entwicklungsvorschlag zum Nutzerbriefing.** | KI-Interesse als Unterstützung für Dennis, rein geskriptet und ohne externe KI-Kosten. Erst nach Test des einfachen Gesprächsmusters ausarbeiten. | Idee; keine zusätzliche erste Probe |
 
 ## Ideenkarte zum Ausfüllen
 
@@ -63,3 +65,6 @@ Ein Boss muss kein Bösewicht sein. Er kann eine Feierabendfreigabe prüfen, ein
 | 16.10.2026 | Retro-Pixelwelt aus Bild 3 | Nutzerwahl im Chat |
 | 16.10.2026 | Erste spielbare Herne-Arena veröffentlichen | Nutzerauftrag; GitHub Pages eingerichtet |
 | 16.10.2026 | Neue Ideen gemeinsam über einen Fahrplan entwickeln und vor großem Ausbau prüfen | Aktueller Nutzerauftrag; Arbeitsweise in AGENTS.md, vorgeschlagene Etappen in ROADMAP.md |
+| 16.10.2026 | Öffentlicher Link bleibt für das private Hobbyspiel okay | Nutzerantwort; keine Zugriffsumstellung nötig |
+| 16.10.2026 | PC und iPhone gleich wichtig | Nutzerantwort; Android derzeit keine eigene Zielpriorität |
+| 16.10.2026 | Erstes Bossbriefing und Foto sichern; daraus einen prüfbaren Vorschlag erstellen | Nutzerinhalt lokal festgehalten; noch keine vollständige Bossproduktion |

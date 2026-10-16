@@ -24,7 +24,7 @@ Eine abgeschlossene, wiederholbare Feierabendreise von etwa 15–25 Minuten mit 
 
 Umfangsgrenze als Vorschlag: ein ausgearbeiteter spielbarer Dennis; drei große Begegnungen mit unterschiedlichen Mustern (Rollen und reale Vorbilder noch offen); sechs aktive Fähigkeiten, drei passive Verbesserungen, zwei besondere Fähigkeitskombinationen; etwa sechs bis acht unterscheidbare Kundentypen. Vorhandene Inhalte zählen mit. Diese Zahlen sind eine Obergrenze für die Planung, kein Sammelauftrag.
 
-Lokaler Kapitelfortschritt und Kapitelneustart, verständliche Einführung, Lautstärke-/Toneinstellungen, lesbare Texte, Bewegungsreduktion, passende Effekte/Musik und echte Laufanimationen gehören zum vorgeschlagenen vollständigen Paket. Gerätepriorität und konkrete Leistungsziele werden im Produktsteckbrief festgelegt, bevor daraus eine technische Zusage wird.
+Lokaler Kapitelfortschritt und Kapitelneustart, verständliche Einführung, Lautstärke-/Toneinstellungen, lesbare Texte, Bewegungsreduktion, passende Effekte/Musik und echte Laufanimationen gehören zum vorgeschlagenen vollständigen Paket. PC und iPhone sind gleich wichtig (Nutzerentscheidung). Konkrete iPhone-Modelle, iOS-Versionen und Leistungsziele bleiben offen. Eine installierbare Web-App wird als eigener Arbeitspunkt empfohlen; native App-Verteilung ist separat zu bewerten, siehe PLATTFORMEN.md.
 
 Größere spätere Wünsche wie weitere spielbare Kollegen, zusätzliche Welten oder ein gemeinsamer Mehrspielermodus kommen in den Ideenparkplatz und lösen eine bewusste Umfangsentscheidung aus. Sie werden nicht automatisch Teil von 1.0.
 
@@ -86,15 +86,16 @@ Zusätzlich notieren wir Rundendauer, erreichte Stufe, Verständnisprobleme und 
 | Pixelgrafik / Dennis / Kunden helfen / Browser | Bereits bestätigt; PRODUCT.md |
 | Gemeinsamer Fahrplan und Beiträge beider Seiten | Vom Nutzer ausdrücklich gewünscht |
 | Noch offene Details zu realen Figuren | Nutzer liefert Hintergrund; keine Vorbilder erfinden |
-| Privat = Hobby oder Zugriffsschutz? | Rückfrage gestellt; aktueller Link und Repository öffentlich. Noch keine Zugriffsumstellung beauftragt. |
-| PC/Laptop oder gleichwertige Mobilunterstützung? | Rückfrage gestellt; konkrete Abnahmematrix danach festlegen |
+| Privat = Hobby oder Zugriffsschutz? | Beantwortet: privates Hobby, öffentlicher Link ausdrücklich okay; kein Zugriffsschutz. |
+| PC/Laptop oder gleichwertige Mobilunterstützung? | Beantwortet: PC und iPhone gleich wichtig. Konkrete Modelle/iOS-Versionen werden noch erfragt. Android keine eigene Priorität für diese Runde. |
 | Drei Kapitel / 15–25 Minuten / Umfangsgrenzen | Empfehlung dieses Plans; noch nicht bestätigt |
 | Titel | Bestehender Arbeitstitel; keine ausdrückliche endgültige Namensentscheidung |
-| Erster Boss | Figurenbriefing erbeten; noch kein Name oder Muster beschlossen |
+| Erster Boss | Nutzerbriefing und Foto eingegangen. Lokaler Figurenentwurf vorhanden; Mechanik und Rolle im Kapitel noch abzustimmen. |
+| iPhone-App | Nutzerinteresse bestätigt; Plattformvergleich erstellt. Empfehlung: Web-App als eigener kleiner Arbeitspunkt, native App bei konkretem Bedarf gesondert planen. |
 
 ## Nächster Arbeitsschritt
 
-**Planung, keine automatische Produktion neuer Kapitel:** Antworten zu Nutzungskreis, Geräten und erstem Boss aufnehmen. Danach den vorgeschlagenen 1.0-Umfang mit dir bestätigen und den ersten 0.2-Arbeitsabschnitt auswählen. Mein Vorschlag: mit drei echten Runden zuerst klären, ob Bewegen, Sammeln und Aufwerten bereits zum Weiterspielen motivieren; dann genau eine Verbesserungshypothese testen.
+**Nutzungskreis und Zielplattformen sind geklärt.** Das erste Figurenbriefing mit Foto ist lokal gesichert, ein konkreter Bossentwurf liegt zur gemeinsamen Bewertung vor. Als Nächstes die echten iPhone-Testgeräte festlegen, den vorgeschlagenen 1.0-Umfang bestätigen und den ersten 0.2-Arbeitsabschnitt auswählen. Vorschlag: kurze Bestandsrunden plus genau eine Probe für ein angekündigtes Gesprächs-/Folienmuster. App-Verpackung bleibt ein separater Arbeitspunkt; keine automatische Produktion aller Bossphasen oder neuer Kapitel.
 
 ## Fachlicher Hintergrund
 

@@ -23,7 +23,7 @@ Diese Regeln setzen den Nutzerwunsch vom 16.10.2026 nach gemeinsamer, zielgerich
 
 - de-DE: richtige Umlaute und ß, bei Großschreibung bevorzugt ẞ. Kein pauschaler Austausch von ss. Namen und Originalzitate als Quellen erhalten; veröffentlichte Adaptionen separat kennzeichnen.
 - Dennis bleibt freundlich und kompetent. Kunden und Kollegen sind liebevoll überzeichnet. Ein Boss braucht erkennbare Eigenarten, Vorankündigung, eine verständliche Aufgabe und einen zufriedenstellenden Abschluss.
-- Die Nutzung ist ein privates Hobbyprojekt; die Zugriffsart ist separat zu klären. GitHub Pages und das Repository sind derzeit öffentlich. „Privat“ nicht als vorhandenen Zugriffsschutz beschreiben.
+- Die Nutzung ist ein privates Hobbyprojekt; der öffentliche Link wurde ausdrücklich bestätigt. PC und iPhone sind gleich wichtig. GitHub Pages und das Repository bleiben öffentlich. Native iPhone-App nur als separaten Arbeitspunkt betrachten; PLATTFORMEN.md beachten. Konkrete Geräte-/iOS-Basis noch offen, keine Hardwaretests behaupten, die nicht stattgefunden haben.
 - Neue rohe Figureninterviews und interne Geschichten unter private/ festhalten (nicht im öffentlichen Git). Für das Spiel ausgearbeitete Texte bewusst aus diesen Notizen übernehmen. Bereits bestätigte öffentliche Spielinhalte dürfen veröffentlicht werden.
 
 ## Prüfung und Abschluss

@@ -16,7 +16,7 @@ Humorvolles, düsteres 2D-Survivor-Spiel für den Browser, inspiriert von Bewegu
 
 ## Users
 
-Vom Nutzer als privates Hobbyspiel vorgesehen; Humor basiert auf Dennis und dem Vertriebsalltag. Ob „privat“ auch technischen Zugriffsschutz bedeutet, ist noch offen. Der aktuelle GitHub-Pages-Link und das Repository sind öffentlich.
+Vom Nutzer als privates Hobbyspiel vorgesehen; Humor basiert auf Dennis und dem Vertriebsalltag. Öffentlich erreichbarer Link ist ausdrücklich bestätigt; kein Zugriffsschutz gewünscht. GitHub-Pages-Link und Repository bleiben öffentlich.
 
 ## Capabilities and Constraints
 
@@ -27,6 +27,9 @@ Vom Nutzer als privates Hobbyspiel vorgesehen; Humor basiert auf Dennis und dem 
 - Stilwahl am 16.10.2026 bestätigt: Bild 3, detailreiche Retro-Pixelgrafik. Spielbarer Prototyp ist freigegeben.
 - Erster spielbarer Arena-Prototyp umgesetzt; GitHub-Pages-Bereitstellung eingerichtet unter https://dephosa.github.io/feierabend-survivors/.
 - Ausbau bis Version 1.0 mit gemeinsamem Fahrplan und Beiträgen beider Seiten gewünscht. Arbeitsweise in AGENTS.md, Vorschläge und Abnahmen in ROADMAP.md, Ideenstatus in IDEEN.md. Konkreter 1.0-Umfang noch nicht bestätigt.
+- PC und iPhone sind gleich wichtige Zielgeräte. Android ist für die aktuelle Kollegenrunde keine eigene Zielpriorität. iPhone-Modelle und unterstützte iOS-Versionen werden noch erhoben; echte Hardwaretests sind erforderlich.
+- Interesse an einer iPhone-App ist bestätigt. Zunächst als separaten Arbeitspunkt prüfen; installierbare Web-App ist die aktuelle Empfehlung, native iOS-Veröffentlichung keine beschlossene 1.0-Anforderung. Plattformvergleich in PLATTFORMEN.md.
+- Erster Bosskandidat vom Nutzer beschrieben und mit Foto belegt; Figurenbriefing und konkreter Mechanikentwurf liegen lokal unter private/. Das Spielverhalten ist noch nicht beschlossen.
 
 ## Brand Commitments
 
