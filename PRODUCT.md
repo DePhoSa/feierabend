@@ -16,7 +16,7 @@ Humorvolles, düsteres 2D-Survivor-Spiel für den Browser, inspiriert von Bewegu
 
 ## Users
 
-Zielpublikum noch nicht ausdrücklich eingegrenzt; Humor basiert auf Dennis und dem Vertriebsalltag.
+Vom Nutzer als privates Hobbyspiel vorgesehen; Humor basiert auf Dennis und dem Vertriebsalltag. Ob „privat“ auch technischen Zugriffsschutz bedeutet, ist noch offen. Der aktuelle GitHub-Pages-Link und das Repository sind öffentlich.
 
 ## Capabilities and Constraints
 
@@ -26,6 +26,7 @@ Zielpublikum noch nicht ausdrücklich eingegrenzt; Humor basiert auf Dennis und 
 - Hörmann ThermoSafe, LPU 42, Schwingtore N80/F80 einbeziehen.
 - Stilwahl am 16.10.2026 bestätigt: Bild 3, detailreiche Retro-Pixelgrafik. Spielbarer Prototyp ist freigegeben.
 - Erster spielbarer Arena-Prototyp umgesetzt; GitHub-Pages-Bereitstellung eingerichtet unter https://dephosa.github.io/feierabend-survivors/.
+- Ausbau bis Version 1.0 mit gemeinsamem Fahrplan und Beiträgen beider Seiten gewünscht. Arbeitsweise in AGENTS.md, Vorschläge und Abnahmen in ROADMAP.md, Ideenstatus in IDEEN.md. Konkreter 1.0-Umfang noch nicht bestätigt.
 
 ## Brand Commitments
 

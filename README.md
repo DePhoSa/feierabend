@@ -6,6 +6,10 @@ Ein liebevoller Pixel-Survivor-Prototyp mit Dennis Ressemann. Kunden wird geholf
 
 **Repository:** https://github.com/DePhoSa/feierabend-survivors
 
+## Gemeinsam weiterentwickeln
+
+Der Fahrplan und die Abschlusskriterien bis 1.0 stehen in [ROADMAP.md](ROADMAP.md). Nutzerideen, eigene Vorschläge und ihre Entscheidungen sammeln wir in [IDEEN.md](IDEEN.md). [AGENTS.md](AGENTS.md) hält die Arbeitsweise für weitere Entwicklungssitzungen fest. Neue Etappen und Umfangsziele sind Empfehlungen, bis sie gemeinsam bestätigt wurden.
+
 ## Spielen
 
 WASD oder Pfeiltasten bewegen Dennis. Auf Touchgeräten den Steuerkreis ziehen. Hilfsmittel beraten automatisch. Grüne Danke-Punkte einsammeln, bei Aufstiegen eine Verbesserung wählen. P/Escape pausiert. Nach Schichtende das letzte große Anliegen lösen und den grünen Ausgang oben erreichen.

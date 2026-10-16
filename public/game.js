@@ -74,7 +74,7 @@ function draw(time,dt){if(!game||!loaded)return;const p=game.player,s=screen.sca
   if(isPlayer){ctx.strokeStyle='#ffbc5c';ctx.lineWidth=2;ctx.beginPath();ctx.ellipse(e.x,e.y+1,26,9,0,0,Math.PI*2);ctx.stroke();}
   sprite(isPlayer?0:e.sprite,e.x,e.y+bob,size,isPlayer?p.facing:e.x>p.x?-1:1,e.flash>0?.65:1);
   if(isPlayer){label('DENNIS',e.x,e.y-size-5,'#ffd28c',12);}
-  else{const w=e.boss?70:39;ctx.fillStyle='#091a2b';ctx.fillRect(e.x-w/2-1,e.y-size+1,w+2,6);ctx.fillStyle='#517083';ctx.fillRect(e.x-w/2,e.y-size+2,w,4);ctx.fillStyle='#99e5b5';ctx.fillRect(e.x-w/2,e.y-size+2,w*Math.max(0,1-e.hp/e.maxHp),4);if(e.boss)label('5 FOTOS. 0 MASSE.',e.x,e.y-size-7,'#ffce7f',12);else if(e.hp===e.maxHp)label('?',e.x,e.y-size-4,'#f6d491',16);}
+  else{const w=e.boss?70:39;ctx.fillStyle='#091a2b';ctx.fillRect(e.x-w/2-1,e.y-size+1,w+2,6);ctx.fillStyle='#517083';ctx.fillRect(e.x-w/2,e.y-size+2,w,4);ctx.fillStyle='#99e5b5';ctx.fillRect(e.x-w/2,e.y-size+2,w*Math.max(0,1-e.hp/e.maxHp),4);if(e.boss)label('5 FOTOS. 0 MAẞE.',e.x,e.y-size-7,'#ffce7f',12);else if(e.hp===e.maxHp)label('?',e.x,e.y-size-4,'#f6d491',16);}
  }
  for(const shot of game.shots){ctx.save();ctx.translate(shot.x,shot.y-28);ctx.rotate(shot.kind==='paper'?time*.006:Math.atan2(shot.vy,shot.vx));if(shot.kind==='paper'){ctx.fillStyle='#fff4d9';ctx.fillRect(-9,-12,18,24);ctx.fillStyle='#537a91';ctx.fillRect(-5,-6,10,2);ctx.fillRect(-5,-1,10,2);ctx.fillRect(-5,4,7,2);}else{ctx.strokeStyle='#ffbd5e';ctx.lineWidth=3;ctx.strokeRect(-7,-3,14,6);ctx.fillStyle='#ffdc93';ctx.fillRect(-12,-1,6,2);}ctx.restore();}
  const run=game.state==='playing';

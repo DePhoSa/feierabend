@@ -3,3 +3,4 @@ node_modules/
 .impeccable/concept-seed/
 *.zip
 *.log
+private/
