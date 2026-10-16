@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-16T08:27:54.248Z",
+  "title": "Design System: Feierabend ist nicht lagermäßig",
+  "extensions": {
+    "colorMeta": {
+      "night": {
+        "role": "neutral",
+        "displayName": "Midnight Petrol",
+        "tonalRamp": [
+          "oklch(15% 0.0408 250.27)",
+          "oklch(26% 0.0408 250.27)",
+          "oklch(38% 0.0408 250.27)",
+          "oklch(49% 0.0408 250.27)",
+          "oklch(61% 0.0408 250.27)",
+          "oklch(72% 0.0408 250.27)",
+          "oklch(84% 0.0408 250.27)",
+          "oklch(95% 0.0408 250.27)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Industrial Blue",
+        "tonalRamp": [
+          "oklch(15% 0.0510 248.41)",
+          "oklch(26% 0.0510 248.41)",
+          "oklch(38% 0.0510 248.41)",
+          "oklch(49% 0.0510 248.41)",
+          "oklch(61% 0.0510 248.41)",
+          "oklch(72% 0.0510 248.41)",
+          "oklch(84% 0.0510 248.41)",
+          "oklch(95% 0.0510 248.41)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Steel Divider",
+        "tonalRamp": [
+          "oklch(15% 0.0505 242.11)",
+          "oklch(26% 0.0505 242.11)",
+          "oklch(38% 0.0505 242.11)",
+          "oklch(49% 0.0505 242.11)",
+          "oklch(61% 0.0505 242.11)",
+          "oklch(72% 0.0505 242.11)",
+          "oklch(84% 0.0505 242.11)",
+          "oklch(95% 0.0505 242.11)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Warm Ivory",
+        "tonalRamp": [
+          "oklch(15% 0.0309 86.46)",
+          "oklch(26% 0.0309 86.46)",
+          "oklch(38% 0.0309 86.46)",
+          "oklch(49% 0.0309 86.46)",
+          "oklch(61% 0.0309 86.46)",
+          "oklch(72% 0.0309 86.46)",
+          "oklch(84% 0.0309 86.46)",
+          "oklch(95% 0.0309 86.46)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Mist Blue",
+        "tonalRamp": [
+          "oklch(15% 0.0241 231.91)",
+          "oklch(26% 0.0241 231.91)",
+          "oklch(38% 0.0241 231.91)",
+          "oklch(49% 0.0241 231.91)",
+          "oklch(61% 0.0241 231.91)",
+          "oklch(72% 0.0241 231.91)",
+          "oklch(84% 0.0241 231.91)",
+          "oklch(95% 0.0241 231.91)"
+        ]
+      },
+      "orange": {
+        "role": "primary",
+        "displayName": "Lamplight Orange",
+        "tonalRamp": [
+          "oklch(15% 0.1466 67.57)",
+          "oklch(26% 0.1466 67.57)",
+          "oklch(38% 0.1466 67.57)",
+          "oklch(49% 0.1466 67.57)",
+          "oklch(61% 0.1466 67.57)",
+          "oklch(72% 0.1466 67.57)",
+          "oklch(84% 0.1466 67.57)",
+          "oklch(95% 0.1466 67.57)"
+        ]
+      },
+      "mint": {
+        "role": "secondary",
+        "displayName": "Helpful Mint",
+        "tonalRamp": [
+          "oklch(15% 0.1032 156.73)",
+          "oklch(26% 0.1032 156.73)",
+          "oklch(38% 0.1032 156.73)",
+          "oklch(49% 0.1032 156.73)",
+          "oklch(61% 0.1032 156.73)",
+          "oklch(72% 0.1032 156.73)",
+          "oklch(84% 0.1032 156.73)",
+          "oklch(95% 0.1032 156.73)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Pixel identity",
+        "purpose": "Menu title; locally hosted Pixelify Sans Bold registered as Pixel."
+      },
+      "headline": {
+        "displayName": "Dialog heading",
+        "purpose": "Short game dialog titles."
+      },
+      "title": {
+        "displayName": "Upgrade name",
+        "purpose": "Short tool and upgrade names."
+      },
+      "body": {
+        "displayName": "Readable instructions",
+        "purpose": "System sans-serif paragraphs and explanations."
+      },
+      "label": {
+        "displayName": "Compact game label",
+        "purpose": "HUD metadata and compact control labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "title-legibility",
+        "value": "0 3px 14px #07101c",
+        "purpose": "Text shadow beneath the menu title."
+      },
+      {
+        "name": "objective-legibility",
+        "value": "0 2px 4px #000",
+        "purpose": "Text shadow beneath the objective over the yard."
+      }
+    ],
+    "motion": [
+      {
+        "name": "action-transition",
+        "value": "background .16s, transform .16s",
+        "purpose": "Primary action and upgrade hover feedback."
+      },
+      {
+        "name": "toast-opacity",
+        "value": "opacity .2s",
+        "purpose": "Game announcement appearance."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Disables CSS transitions/animations, rain, bobbing, and exit pulsing. Gameplay effects and the low-patience border pulse remain."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "min-width: 1600px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "max-width: 1000px"
+      },
+      {
+        "name": "mobile",
+        "value": "max-width: 700px"
+      },
+      {
+        "name": "touch",
+        "value": "(pointer: coarse), (max-width: 700px)"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The tactile orange start action; also used for resume and retry.",
+      "html": "<button class=\"ds-primary\"><span>Auf in den Feierabend</span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m8 4 8 8-8 8\"/></svg></button>",
+      "css": ".ds-primary{display:flex;align-items:center;justify-content:space-between;gap:28px;background:var(--orange,#ffad4b);color:#102133;border:0;border-radius:0;padding:18px 23px;font-family:var(--pixel,Pixel,monospace);font-size:22px;min-height:62px;cursor:pointer;transition:background .16s,transform .16s}.ds-primary svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;flex-shrink:0;width:20px}.ds-primary:hover{background:#ffc879;transform:translateY(-2px)}.ds-primary:active{transform:translateY(1px)}.ds-primary:focus-visible{outline:3px solid var(--orange,#ffad4b);outline-offset:5px}.ds-primary:disabled{cursor:wait;opacity:.6}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined actions for returning to the menu or deferring a start.",
+      "html": "<button class=\"ds-secondary\">Zurück zum Feierabend</button>",
+      "css": ".ds-secondary{font-family:Segoe UI,Arial,sans-serif;color:var(--ink,#f8eed8);padding:13px 17px;background:none;border:1px solid #728797;border-radius:0;font-size:13px;min-height:46px;cursor:pointer}.ds-secondary:hover{background:#1a384d}.ds-secondary:focus-visible{outline:3px solid var(--orange,#ffad4b);outline-offset:5px}.ds-secondary:disabled{cursor:wait;opacity:.6}"
+    },
+    {
+      "name": "Duration choice",
+      "kind": "chip",
+      "refersTo": "duration-choice",
+      "description": "Two inline run-length buttons; orange text and underline mark the selected duration.",
+      "html": "<div class=\"ds-duration\" role=\"group\" aria-label=\"Schichtdauer\"><button class=\"ds-duration-selected\" aria-pressed=\"true\">6 Min. Feierabendrunde</button><button aria-pressed=\"false\">90 Sek. Schnupperrunde</button></div>",
+      "css": ".ds-duration{display:flex;gap:18px;flex-wrap:wrap}.ds-duration button{font-family:Segoe UI,Arial,sans-serif;color:var(--ink,#f8eed8);font-size:11px;background:none;color:var(--muted,#b8cad4);border:0;border-bottom:1px solid transparent;border-radius:0;padding:0 0 5px;min-height:32px;cursor:pointer}.ds-duration .ds-duration-selected{color:var(--orange,#ffad4b);border-color:var(--orange,#ffad4b)}.ds-duration button:focus-visible{outline:3px solid var(--orange,#ffad4b);outline-offset:5px}"
+    },
+    {
+      "name": "Patience and experience",
+      "kind": "card",
+      "refersTo": "patience-panel",
+      "description": "Compact game HUD combining numeric patience, progress, level, and experience.",
+      "html": "<div class=\"ds-patience\"><div class=\"ds-meter-label\"><strong>Dennis’ Geduld</strong><span>100 %</span></div><div class=\"ds-meter\" role=\"progressbar\" aria-label=\"Geduld\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"100\"><div></div></div><div class=\"ds-xp\"><span>LV. 1</span><div class=\"ds-xp-track\"><div></div></div><span>0 / 6</span></div></div>",
+      "css": ".ds-patience{font-family:Segoe UI,Arial,sans-serif;color:var(--ink,#f8eed8);width:250px;background:#0b1d2deb;padding:13px 16px;border:1px solid #40576b}.ds-meter-label{font-size:11px;display:flex;justify-content:space-between;margin-bottom:7px}.ds-meter-label span{color:var(--mint,#94e3b3);font-variant-numeric:tabular-nums}.ds-meter{height:9px;background:#284150}.ds-meter>div{height:100%;width:100%;background:var(--mint,#94e3b3);transform-origin:left center;transition:transform .15s}.ds-xp{display:flex;align-items:center;gap:8px;font-size:11px;margin-top:9px;color:var(--orange,#ffad4b);font-variant-numeric:tabular-nums}.ds-xp-track{height:4px;flex:1;background:#284150}.ds-xp-track>div{height:100%;width:0;background:var(--orange,#ffad4b)}@media(max-width:700px){.ds-patience{width:150px;padding:10px}}@media(prefers-reduced-motion:reduce){.ds-meter>div{transition:none}}"
+    },
+    {
+      "name": "Upgrade choice",
+      "kind": "button",
+      "refersTo": "upgrade-choice",
+      "description": "A modal upgrade card with keyboard number, tool icon, benefit, and stage.",
+      "html": "<button class=\"ds-upgrade\"><span class=\"ds-choice-number\">1</span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 15h18v5H3zM5 12 19 5l2 4-14 7M6 20v2m12-2v2\"/></svg><strong>Angebots-Tacker</strong><span class=\"ds-upgrade-tag\">Automatische Beratung · Stufe 2</span><p>Mehr Wirkung, kürzere Pause. Ein Angebot, das sitzt.</p><small>+35 % Wirkung · schneller tackern</small></button>",
+      "css": ".ds-upgrade{font-family:Segoe UI,Arial,sans-serif;color:var(--ink,#f8eed8);display:flex;text-align:left;flex-direction:column;background:#0b1d30;border:1px solid #627b8d;border-radius:0;padding:21px 16px;position:relative;min-height:250px;max-width:300px;cursor:pointer;transition:background .16s,transform .16s}.ds-upgrade:hover{background:#1c3c51;border-color:var(--orange,#ffad4b);transform:translateY(-4px)}.ds-upgrade:focus-visible{outline:3px solid var(--orange,#ffad4b);outline-offset:5px}.ds-upgrade svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:square;stroke-linejoin:miter;flex-shrink:0;width:34px;height:34px;color:var(--orange,#ffad4b);margin-bottom:18px}.ds-upgrade strong{font:22px/1.1 var(--pixel,Pixel,monospace);color:var(--ink,#f8eed8)}.ds-upgrade .ds-upgrade-tag{font-size:11px;color:var(--mint,#94e3b3);margin-top:8px}.ds-upgrade p{font-size:12px;line-height:1.6;flex:1;margin-bottom:20px;color:var(--muted,#b8cad4)}.ds-upgrade small{color:var(--orange,#ffad4b);font-size:11px;line-height:1.5}.ds-upgrade .ds-choice-number{position:absolute;right:12px;top:13px;font-family:var(--pixel,Pixel,monospace);color:var(--muted,#b8cad4)}@media(max-width:700px){.ds-upgrade{min-height:0;padding:14px 16px 14px 63px;display:block}.ds-upgrade svg{position:absolute;left:16px;top:19px;width:29px;height:29px}.ds-upgrade strong{font-size:21px}.ds-upgrade .ds-upgrade-tag{display:block}.ds-upgrade p{margin:6px 0}}@media(prefers-reduced-motion:reduce){.ds-upgrade{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Feierabend im Pixelhof",
+    "overview": "The visual world is a rainy industrial evening: midnight petrol and cobalt surroundings, orange lamplight, ivory pixel lettering, and mint signals of successful help. Dennis stays friendly, capable, and affectionately portrayed; the dark setting creates atmosphere without turning customers into enemies to kill.\n\nThe user selected image 3, the detailed retro pixel world, as the art reference. It is not a complete UI composition. The shipped interface translates that world into square, readable game panels, concise German copy, tactile controls, and a viewport dominated by the yard.",
+    "keyCharacteristics": [
+      "Detailed retro pixel environment with crisp native-alpha character sprites.",
+      "Dark blue panels, orange actions, and mint successful-help feedback.",
+      "Pixel display type paired with readable system body type.",
+      "Responsive game overlays and focused upgrade choices."
+    ],
+    "rules": [
+      {
+        "name": "The Helpful Color Rule",
+        "body": "Orange invites action; mint marks patience and successful help. Low patience changes to a warm coral warning and retains its numeric percentage.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Pixel type carries identity and short game moments; system sans-serif carries instructions and sustained reading.",
+        "section": "typography"
+      },
+      {
+        "name": "The Readable Night Rule",
+        "body": "Darken scenery beneath text and use bordered panels for information; do not rely on ambient card shadows to separate controls.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve the selected retro pixel art and Dennis’ friendly character.",
+      "Do use orange for actions and mint for successful help, patience, and experience pickups.",
+      "Do keep body copy in the system sans-serif and pixel lettering for prominent game identity and short headings.",
+      "Do retain visible keyboard focus, semantic buttons, and the upgrade modal’s focus handling.",
+      "Do preserve native sprite alpha and disable image smoothing when drawing the game.",
+      "Do retain reduced-motion handling for rain, bobbing, exit pulsing, and CSS transitions."
+    ],
+    "donts": [
+      "Don’t treat image 3 as a measured web UI layout.",
+      "Don’t replace square panels with rounded generic dashboard cards.",
+      "Don’t use pixel lettering for every paragraph or obscure controls beneath scenery.",
+      "Don’t depict Dennis negatively or make customers’ departure read as death.",
+      "Don’t add opaque sprite backplates or smooth the pixel artwork."
+    ]
+  }
+}

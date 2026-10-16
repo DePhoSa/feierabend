@@ -1,0 +1,48 @@
+# Feierabend ist nicht lagermäßig
+
+Ein liebevoller Pixel-Survivor-Prototyp mit Dennis Ressemann. Kunden wird geholfen; niemand wird getötet. Ausgangspunkt: Hörmann Herne, Schlossstraße 30. Inoffizielle Parodie, keine offizielle Hörmann-Veröffentlichung.
+
+## Spielen
+
+WASD oder Pfeiltasten bewegen Dennis. Auf Touchgeräten den Steuerkreis ziehen. Hilfsmittel beraten automatisch. Grüne Danke-Punkte einsammeln, bei Aufstiegen eine Verbesserung wählen. P/Escape pausiert. Nach Schichtende das letzte große Anliegen lösen und den grünen Ausgang oben erreichen.
+
+Zwei Spielzeiten: 6 Minuten und 90 Sekunden. Geduld regeneriert außerhalb des Gedränges, Kaffee hilft zusätzlich. Lokale Rekorde pro Spielzeit und Tonwahl werden im Browser gespeichert; kein Login, Backend, Analytics oder externer Laufzeitdienst.
+
+## Lokal starten
+
+Node.js 22 oder neuer genügt, keine Paketinstallation:
+
+```sh
+node server.mjs
+```
+
+Dann http://127.0.0.1:4173 öffnen. Alternativ kann jeder statische Server den Ordner `public` bereitstellen. Das Spiel verwendet ES-Module und sollte über HTTP statt per Doppelklick auf index.html gestartet werden.
+
+## Prüfen
+
+```sh
+node --test tests/core.test.mjs
+node --check public/game.js
+node --check public/core.js
+```
+
+## Veröffentlichung
+
+GitHub Pages deployt den Ordner `public` durch `.github/workflows/pages.yml`, sobald ein Commit auf `main` gepusht wird. In den Repository-Einstellungen Pages → Source: GitHub Actions wählen. Alle Assets sind relativ verlinkt und funktionieren unter einem Repository-Unterpfad.
+
+## Aufbau
+
+- `public/core.js`: unabhängige Spielsimulation, Wellen, Fähigkeiten, Fortschritt und Sieg/Niederlage.
+- `public/game.js`: Canvas-Rendering, Eingabe, Menüs, Audio und lokale Rekorde.
+- `public/style.css`: responsive Oberfläche und Touch-Steuerung.
+- `public/assets`: generierte Pixelgrafik und lokal bereitgestellte Schrift.
+- `tests/core.test.mjs`: Tests für Bewegung, Pause, Aufstiege, Abschluss, Geduld und eine längere Simulation.
+- `concepts`: Konzept, Original-Sprüche, Bildentwürfe und Generierungsprotokolle.
+
+## Umfang dieses Prototyps
+
+Kapitel 1 ist eine vollständige Arena mit Abschluss. Die Kanalreise, weitere Außenwelten, Waltrop als begehbarer Ort und echte mehrteilige Laufanimationen sind noch nicht implementiert. Figuren bewegen sich mit leichter Schrittbewegung aus Einzel-Sprites. Der Hof ist frei gestaltet, keine vermessene Ortsrekonstruktion. Audio besteht aus synthetischen Spielsignalen und ist standardmäßig aus.
+
+## Bild- und Schriftquellen
+
+Pixelgrafiken mit der eingebauten Bildgenerierung anhand des bereitgestellten Referenzfotos erzeugt. Prompts unter `concepts/PROMPTS.md` und `concepts/asset-prompts.md`. Das Originalfoto wird nicht veröffentlicht. Pixelify Sans: Stefie Justprince, SIL Open Font License; Lizenz in `public/assets/Pixelify-OFL.txt`. Marken- und Produktnamen gehören ihren jeweiligen Inhabern.
