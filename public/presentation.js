@@ -1,6 +1,6 @@
 import {WORLD} from './core.js';
 
-export const PRESENTATION={duration:45,points:3,warning:3.2,active:1.2,damagePerSecond:12,width:320,height:140,speakerSpeed:132,rests:[2.4,1.8,1.2]};
+export const PRESENTATION={duration:45,points:3,warning:3.2,active:1.2,damagePerSecond:12,width:320,height:140,speakerSpeed:132,rests:[2.4,1.8,1.2],nearRadius:62,nearGrace:.5,nearDamage:10};
 export const PRESENTATION_ROUTE=[{x:980,y:540},{x:940,y:740},{x:730,y:760},{x:650,y:550},{x:800,y:425}];
 const STORIES=['„Frag doch mal die KI.“','„Eine Folie hab ich noch.“','„Nur noch dieser eine Punkt.“'];
 const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
@@ -17,12 +17,23 @@ export class PresentationTrial {
   this.points=0;this.target=PRESENTATION.points;
   this.slide=null;this.slideCount=0;this.avoided=0;
   this.note=null;this.events=[];this.reason=null;this.damageTaken=0;
+  this.nearTime=0;this.nearHit=false;this.nearDamageTaken=0;
  }
  emit(type,data={}){this.events.push({type,...data});}
  drain(){const events=this.events;this.events=[];return events;}
  start(){if(this.state==='ready'){this.state='playing';this.emit('start');}}
  pause(){if(this.state==='playing'){this.state='paused';this.player.moving=false;this.speaker.moving=false;}}
  resume(){if(this.state==='paused')this.state='playing';}
+ get nearSpeaker(){return Math.hypot(this.player.x-this.speaker.x,this.player.y-this.speaker.y)<PRESENTATION.nearRadius;}
+ checkDistance(dt){
+  if(!this.nearSpeaker){this.nearTime=0;this.nearHit=false;return;}
+  const previous=this.nearTime;this.nearTime+=dt;
+  // A brief chance to step away also prevents instant punishment at a fresh note.
+  const exposed=Math.max(0,this.nearTime-PRESENTATION.nearGrace)-Math.max(0,previous-PRESENTATION.nearGrace);
+  if(exposed>0){const damage=exposed*PRESENTATION.nearDamage;this.player.hp=Math.max(0,this.player.hp-damage);this.damageTaken+=damage;this.nearDamageTaken+=damage;
+   if(!this.nearHit){this.nearHit=true;this.emit('near');}
+  }
+ }
  nextPattern(){
   const p=this.player,j=this.speaker,w=PRESENTATION.width,h=PRESENTATION.height;
   const positions=[{x:p.x,y:p.y},{x:j.x-w/2-75,y:j.y},{x:j.x+w/2+75,y:j.y},{x:j.x,y:j.y-h/2-75},{x:j.x,y:j.y+h/2+75}]
@@ -66,6 +77,7 @@ export class PresentationTrial {
    }
    if(s.age>=end)this.finishStory();
   }else this.walk(dt);
+  this.checkDistance(dt);
   if(this.note&&Math.hypot(this.note.x-p.x,this.note.y-p.y)<32){
    this.points=Math.min(this.target,this.points+1);this.note=null;p.hp=Math.min(p.maxHp,p.hp+7);this.emit('point',{points:this.points});
   }

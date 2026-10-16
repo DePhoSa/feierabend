@@ -36,13 +36,16 @@ test('three predictable tempo stages shorten the stop pauses without shortening 
  assert.equal(presentationRestAt(0),2.4);assert.equal(presentationRestAt(14.99),2.4);assert.equal(presentationRestAt(15),1.8);assert.equal(presentationRestAt(30),1.2);assert.equal(presentationRestAt(45),1.2);
  const g=new PresentationTrial();g.start();g.time=31;g.nextPattern();advance(g,.1);assert.equal(g.player.hp,100);assert.ok(g.slide.age<PRESENTATION.warning);
 });
-test('following Jörg and collecting his finished notes can complete all 45 seconds',()=>{
+test('following with distance and collecting old notes can complete all 45 seconds',()=>{
  const g=new PresentationTrial();g.start();let maxDistance=0;
  for(let i=0;i<1000&&g.state==='playing';i++){
-  const target=g.note||g.speaker,dx=target.x-g.player.x,dy=target.y-g.player.y,d=Math.hypot(dx,dy);maxDistance=Math.max(maxDistance,d);
-  g.tick(.05,d>12?{x:dx/d,y:dy/d}:{x:0,y:0});
+  const p=g.player,j=g.speaker,jd=Math.hypot(p.x-j.x,p.y-j.y);let input={x:0,y:0};
+  const target=g.note||j,dx=target.x-p.x,dy=target.y-p.y,d=Math.hypot(dx,dy);maxDistance=Math.max(maxDistance,d);
+  if(jd<PRESENTATION.nearRadius+18){input={x:(p.x-j.x)/(jd||1),y:(p.y-j.y)/(jd||1)};}
+  else if(d>(g.note?12:PRESENTATION.nearRadius+30)){input={x:dx/d,y:dy/d};}
+  g.tick(.05,input);
  }
- assert.equal(g.state,'won');assert.equal(g.time,45);assert.equal(g.points,3);assert.equal(g.damageTaken,0);assert.ok(g.slideCount>=4);assert.ok(maxDistance>150);
+ assert.equal(g.state,'won');assert.equal(g.time,45);assert.equal(g.points,3);assert.equal(g.nearDamageTaken,0);assert.ok(g.slideCount>=4);assert.ok(maxDistance>150);
 });
 test('standing still cannot win without resolving the discussion points',()=>{
  const g=new PresentationTrial();g.start();advance(g,46);assert.equal(g.state,'lost');assert.equal(g.reason,'points');assert.ok(g.points<3);
@@ -55,4 +58,14 @@ test('note pickup counts once; failure and restart leave no lingering state',()=
 test('fractional touch movement stays normalized and within yard bounds',()=>{
  const g=new PresentationTrial();g.start();const p=g.player,x=p.x,y=p.y;g.tick(.05,{x:.5,y:.5});assert.ok(Math.abs(Math.hypot(p.x-x,p.y-y)-Math.hypot(.5,.5)*p.speed*.05)<.001);
  p.x=WORLD.left+24;g.tick(.05,{x:-1,y:0});assert.equal(p.x,WORLD.left+24);
+});
+
+test('proximity grants a short reaction window then drains patience during a story',()=>{
+ const g=new PresentationTrial();g.start();until(g,()=>g.slide!==null);Object.assign(g.player,{x:g.speaker.x,y:g.speaker.y});
+ advance(g,.45);assert.equal(g.player.hp,100);advance(g,1.05);assert.ok(g.player.hp<100);assert.ok(Math.abs(g.nearDamageTaken-10)<.0001);
+ assert.ok(g.drain().some(e=>e.type==='near'));const before=g.nearDamageTaken;g.player.x=g.speaker.x+PRESENTATION.nearRadius+1;g.tick(.05);assert.equal(g.nearTime,0);assert.equal(g.nearDamageTaken,before);
+});
+test('moving Jörg also drains patience nearby; pause and restart clear exposure correctly',()=>{
+ const g=new PresentationTrial();g.start();for(let i=0;i<30;i++){g.player.x=g.speaker.x;g.player.y=g.speaker.y;g.tick(.05);}assert.ok(g.nearDamageTaken>0);assert.ok(g.speaker.moving);
+ g.pause();const snapshot=JSON.stringify(g);advance(g,2);assert.equal(JSON.stringify(g),snapshot);const fresh=new PresentationTrial();assert.equal(fresh.nearTime,0);assert.equal(fresh.nearDamageTaken,0);assert.equal(fresh.nearSpeaker,false);
 });

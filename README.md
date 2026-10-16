@@ -63,3 +63,5 @@ Pixelgrafiken mit der eingebauten Bildgenerierung anhand des bereitgestellten Re
 Die Folienprobe besitzt eine ruhigere Korrekturfassung (`0.2.0-preview.2`): kürzere aktive Folien, längere Pausen, halber Geduldsverlust, liegen bleibende Notizen und kompaktes HUD. Details und nächste Bewertung in ROADMAP.md; Herne-Hauptspiel unverändert.
 
 Aktuelle Spielprobe `0.2.0-preview.3`: Jörg geht zwischen Erzählplätzen, hält für seine Folie an und hinterlässt anschließend eine Notiz. Drei Pausenstufen ziehen das Tempo zum Ende an. Technisch geprüft; die Live-Abnahme übernimmt der Nutzer (IDEEN.md I-012). Vorherige Ruhefassung bleibt in Git bei `e88c1f9` nachvollziehbar.
+
+`0.2.0-preview.4` ergänzt auf Nutzerwunsch Jörgs sichtbaren Abstandskreis: nach kurzer Reaktionszeit kostet Nähe Geduld, auch beim Gehen. Geh-/Erzählmuster vorläufig beibehalten; nächster Roadmap-Schwerpunkt ist das kompakte HUD der normalen Herne-Runde.
