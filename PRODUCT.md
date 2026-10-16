@@ -29,7 +29,7 @@ Vom Nutzer als privates Hobbyspiel vorgesehen; Humor basiert auf Dennis und dem 
 - Ausbau bis Version 1.0 mit gemeinsamem Fahrplan und Beiträgen beider Seiten bestätigt. Arbeitsweise in AGENTS.md, bestätigter Arbeitsrahmen und Abnahmen in ROADMAP.md, Ideenstatus in IDEEN.md. Mengen und Dauer sind überprüfbare Planungsgrenzen.
 - PC und Handy sind gleich wichtig. Die Kollegen nutzen iPhones, der Nutzer selbst Android; Android gehört deshalb ebenfalls zur Geräteprüfung. Der Nutzer besitzt kein eigenes iPhone-Testgerät. Ein ungefähr sechs Jahre altes iPhone soll unterstützt werden; Modell und iOS-Version sind unbekannt. Das ist eine Zielanforderung, noch kein Kompatibilitätsnachweis. Echte iPhone-Hardwaretests bleiben erforderlich.
 - Interesse an einer iPhone-App ist bestätigt. Zunächst als separaten Arbeitspunkt prüfen; installierbare Web-App ist die aktuelle Empfehlung, native iOS-Veröffentlichung keine beschlossene 1.0-Anforderung. Plattformvergleich in PLATTFORMEN.md.
-- Erster Bosskandidat vom Nutzer beschrieben und mit Foto belegt; rohe Figureninformationen liegen lokal unter private/. Separate 45-Sekunden-Folienprobe mit Platzhaltergrafik umgesetzt; eine erfolgreiche technische Prüfung ersetzt nicht das noch offene Nutzerfeedback zur endgültigen Bossmechanik.
+- Erster Bosskandidat vom Nutzer beschrieben und mit Foto belegt; rohe Figureninformationen liegen lokal unter private/. Separate 45-Sekunden-Folienprobe mit Platzhaltergrafik umgesetzt; die Idee wurde vom Nutzer positiv bewertet. Rhythmus und mobile Übersicht müssen nach seinem Feedback verbessert werden; die endgültige Bossmechanik ist weiterhin nicht abgenommen. Ergebnis und Korrekturrunde stehen in IDEEN.md I-001/I-011.
 
 ## Brand Commitments
 

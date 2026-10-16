@@ -1,6 +1,6 @@
 import {WORLD} from './core.js';
 
-export const PRESENTATION={duration:45,points:3,warning:2.4,active:3,interval:6.8,damagePerSecond:24,width:440,height:190};
+export const PRESENTATION={duration:45,points:3,warning:3.2,active:1.2,interval:9,damagePerSecond:12,width:320,height:140};
 const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
 export function insideSlide(point,slide,margin=0){return Math.abs(point.x-slide.x)<slide.w/2+margin&&Math.abs(point.y-slide.y)<slide.h/2+margin;}
 
@@ -10,7 +10,7 @@ export class PresentationTrial {
   this.state='ready';this.time=0;this.duration=PRESENTATION.duration;
   this.player={x:800,y:650,hp:100,maxHp:100,speed:174,facing:1,moving:false};
   this.speaker={x:800,y:425};this.points=0;this.target=PRESENTATION.points;
-  this.slide=null;this.slideCount=0;this.avoided=0;this.nextSlide=3;
+  this.slide=null;this.slideCount=0;this.avoided=0;this.nextSlide=5;
   this.note={x:985,y:650};this.events=[];this.reason=null;this.damageTaken=0;
  }
  emit(type,data={}){this.events.push({type,...data});}
@@ -20,9 +20,14 @@ export class PresentationTrial {
  resume(){if(this.state==='paused')this.state='playing';}
  nextPattern(){
   const p=this.player,w=PRESENTATION.width,h=PRESENTATION.height;
-  this.slide={x:clamp(p.x,WORLD.left+w/2+24,WORLD.right-w/2-24),y:clamp(p.y,WORLD.top+h/2+24,WORLD.bottom-h/2-24),w,h,age:0,hit:false};
+  const positions=[{x:p.x,y:p.y},{x:p.x,y:p.y-h-80},{x:p.x,y:p.y+h+80},{x:p.x-w-80,y:p.y},{x:p.x+w+80,y:p.y}]
+   .map(n=>({x:clamp(n.x,WORLD.left+w/2+24,WORLD.right-w/2-24),y:clamp(n.y,WORLD.top+h/2+24,WORLD.bottom-h/2-24),w,h}));
+  // An unfinished note stays where the player saw it, outside the next footprint.
+  const safe=positions.filter(s=>!this.note||!insideSlide(this.note,s,35));
+  const position=safe[0]||positions[0];
+  this.slide={...position,age:0,hit:false};
   this.slideCount++;
-  if(this.points<this.target){
+  if(this.points<this.target&&!this.note){
    const s=this.slide,vertical=this.slideCount%2?1:-1;
    const candidates=[{x:p.x,y:s.y+vertical*(h/2+64)},{x:p.x,y:s.y-vertical*(h/2+64)},{x:s.x-w/2-64,y:p.y},{x:s.x+w/2+64,y:p.y}]
     .map(n=>({x:clamp(n.x,WORLD.left+28,WORLD.right-28),y:clamp(n.y,WORLD.top+28,WORLD.bottom-28)}))

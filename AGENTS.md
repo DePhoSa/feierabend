@@ -29,7 +29,7 @@ Diese Regeln setzen den Nutzerwunsch vom 16.10.2026 nach gemeinsamer, zielgerich
 ## Prüfung und Abschluss
 
 - Passende bestehende Tests und Syntaxprüfung ausführen. Keine Tests schreiben, die nur eine kleine Textänderung nachbauen.
-- Gameplay-Änderungen zusätzlich im Browser spielen. Den betroffenen Weg bis Ende prüfen; bei bossbezogenen Mechaniken auch Sieg, Scheitern und Neustart. Nicht aus bestandenen Logiktests auf einen manuellen vollständigen Durchlauf schließen.
+- Nutzerentscheidung vom 16.10.2026: Abschließende Live-/Browser- und Spielgefühltests übernimmt der Nutzer, um Tokenkosten zu senken. Standardprüfung der Entwicklung: Quellcodeanalyse, Syntaxprüfung und passende vorhandene automatisierte Logiktests. Keine selbstständigen Browserdurchläufe, Screenshots oder visuellen Testschleifen; nur auf ausdrücklichen Nutzerauftrag. Zur Übergabe eine kurze konkrete manuelle Testliste liefern. Veröffentlichung nach den technischen Prüfungen als Testfassung erlaubt; nicht als vom Nutzer abgenommen ausgeben. Nicht aus bestandenen Logiktests auf einen manuellen vollständigen Durchlauf schließen.
 - Für Funktionsfehler, Spielgefühl und Darstellung getrennt festhalten, was geprüft wurde. Grenzen ehrlich angeben.
 - IDEEN.md und ROADMAP.md bei Entscheidungen aktualisieren; bestätigte dauerhafte Änderungen in PRODUCT.md übernehmen. Entscheidungen einmal festhalten und auf die Quelle verweisen, statt widersprüchliche Listen zu pflegen.
 - GitHub Pages wird aus main veröffentlicht. Experimente auf einem Entwicklungszweig halten; main bleibt die spielbare Fassung. Erst integrierte, passend geprüfte Änderungen nach main übernehmen. Bereits autorisierte Korrekturen dürfen nach den Checks veröffentlicht werden.

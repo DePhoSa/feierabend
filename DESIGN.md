@@ -192,3 +192,7 @@ Rain is a lightweight canvas overlay. A reduced-motion preference suppresses rai
 - **Don’t** depict Dennis negatively or make customers’ departure read as death.
 - **Don’t** add opaque sprite backplates or smooth the pixel artwork.
 
+
+## Scoped exception: presentation trial
+
+The separate `public/probe.html` experiment keeps the same world, palette, fonts and dialog shell. After user feedback about a crowded phone view, `probe.css` replaces the stacked gameplay panels with a single 64px status bar (52px in short landscape), numeric patience and a 5px meter, a 29px timer (26px on phones), a 12px note count and a pause target of at least 44px. One 14px situational line sits below. The masthead, permanent legend, duplicate objective and bottom quote box are omitted during play; help, sound and navigation remain in Pause. The canvas fills the viewport and the steering circle remains at the lower left. These are local trial choices to evaluate before applying them to the main arena. They do not replace its documented layout.

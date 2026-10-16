@@ -59,3 +59,5 @@ Kapitel 1 ist eine vollständige Arena mit Abschluss. Die Kanalreise, weitere Au
 ## Bild- und Schriftquellen
 
 Pixelgrafiken mit der eingebauten Bildgenerierung anhand des bereitgestellten Referenzfotos erzeugt. Prompts unter `concepts/PROMPTS.md` und `concepts/asset-prompts.md`. Das Originalfoto wird nicht veröffentlicht. Pixelify Sans: Stefie Justprince, SIL Open Font License; Lizenz in `public/assets/Pixelify-OFL.txt`. Marken- und Produktnamen gehören ihren jeweiligen Inhabern.
+
+Die Folienprobe besitzt eine ruhigere Korrekturfassung (`0.2.0-preview.2`): kürzere aktive Folien, längere Pausen, halber Geduldsverlust, liegen bleibende Notizen und kompaktes HUD. Details und nächste Bewertung in ROADMAP.md; Herne-Hauptspiel unverändert.

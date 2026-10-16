@@ -9,7 +9,7 @@ Stand: 16. Oktober 2026. Der Nutzer hat den Fahrplan als Arbeitsrahmen bestätig
 - Gute Grundlage für die Entwicklung; noch kein fertiges Kampagnenspiel und kein bereits auf Spielspaß getestetes Referenzkapitel.
 - Prüfstand: sieben Simulationstests, erste Desktop-/Mobil-Browserprüfungen. Ein vollständiger manueller Sieg und echte Handy-Hardwaretests sind noch offen; Einzelheiten in TESTING.md.
 - Textkorrektur dieses Arbeitsabschnitts: „5 FOTOS. 0 MASSE.“ → „5 FOTOS. 0 MAẞE.“. Alle 16 Dennis-Sprüche auf relevante ß-/ss-Wörter geprüft; ß, ẞ und Umlaute im Zeichenvorrat der Pixelschrift nachgewiesen.
-- Erster 0.2-Arbeitsabschnitt umgesetzt: separate 45-Sekunden-Spielprobe „Nur ganz kurz, Dennis …“ mit angekündigten PowerPoint-Flächen und drei Notizen. Jörg nutzt ausdrücklich eine vorhandene Platzhalterfigur. Herne-Hauptspiel bleibt separat erreichbar. Technische Prüfung und erster vollständiger Tastaturdurchlauf bestanden; Nutzer-/Spielspaßfeedback steht noch aus. Meilenstein 0.2 dadurch noch nicht abgeschlossen.
+- Erster 0.2-Arbeitsabschnitt umgesetzt: separate 45-Sekunden-Spielprobe „Nur ganz kurz, Dennis …“ mit angekündigten PowerPoint-Flächen und drei Notizen. Jörg nutzt ausdrücklich eine vorhandene Platzhalterfigur. Herne-Hauptspiel bleibt separat erreichbar. Technische Prüfung und erster vollständiger Tastaturdurchlauf bestanden; Erstes Nutzerfeedback positiv zur Idee, kritisch zu Hektik, langer Folienaktivität, Geduldsverlust und voller Handyansicht. Eine begrenzte Korrekturfassung beruhigt den Ablauf und reduziert das Probe-HUD; erneute Nutzerbewertung offen. Meilenstein 0.2 dadurch noch nicht abgeschlossen.
 
 ## Bestätigte Leitplanken
 
@@ -52,6 +52,8 @@ Die Testpersonen-Zahlen sind pragmatische Arbeitsziele, keine repräsentative St
 6. **Ergebnis festhalten.** Was beschlossen, getestet und verschoben wurde, steht im Plan. Die nächste Sitzung startet beim nächsten offenen Schritt.
 
 Ein Experiment besteht aus einer begrenzten ersten Umsetzung und höchstens einer gezielten Korrekturrunde, bevor wir das Ergebnis bewerten. Planungsrichtwert: 30–60 Minuten aktive Arbeit bis zu einer bewertbaren Probe; externe Bildgenerierung, Wartezeiten und späteres Ausarbeiten sind getrennt zu betrachten. Sobald eine Idee größer wird als ihr Testzweck, wird sie geteilt oder neu eingeordnet.
+
+Die abschließenden Live-/Browser- und Spielgefühltests übernimmt der Nutzer (Entscheidung vom 16.10.2026 zur Senkung der Tokenkosten). Ich prüfe Quellcode, Syntax und passende vorhandene automatisierte Logiktests und übergebe eine kurze manuelle Testliste. Eigene Live-Durchläufe nur auf ausdrücklichen Wunsch; technische Prüfung ist keine Spielspaßabnahme.
 
 Routinefehler und kleine Verbesserungen innerhalb des festgelegten Ziels kann ich selbstständig beheben. Über Richtungswechsel und wesentlich größeren Umfang entscheiden wir gemeinsam. Du musst keine technischen Detailentscheidungen treffen und nicht jeden Knopf absegnen.
 
@@ -96,7 +98,7 @@ Zusätzlich notieren wir Rundendauer, erreichte Stufe, Verständnisprobleme und 
 
 ## Nächster Arbeitsschritt
 
-**Die erste Folienprobe bewerten.** Der Nutzer spielt möglichst je eine Runde am PC und auf seinem Android-Handy. Zwei Fragen: Ist die Vorwarnung verständlich? Macht das rechtzeitige Ausweichen samt Notizen Spaß und passt der Gesprächston zu Jörg? Ergebnis unter IDEEN.md I-001 festhalten: behalten, gezielt ändern oder parken. Vor dieser Rückmeldung keine weiteren Bossphasen und keine finale Jörg-Grafik produzieren. Die Proben veröffentlichen wir nach technischer Prüfung als separat erreichbare Testfassung; das bestätigt ihren Spielspaß nicht automatisch. Die übrigen 0.2-Abschlusskriterien bleiben offen. Modell/iOS des älteren Kollegen-iPhones später erheben und vor 1.0 dort tatsächlich spielen. App-Verpackung bleibt ein separater Arbeitspunkt.
+**Die ruhigere Korrekturfassung bewerten.** Siehe IDEEN.md I-001 und I-011 für Nutzerfeedback und Umfang. Der Nutzer vergleicht auf PC und Android: Ist der Rhythmus jetzt angenehm? Bleibt genug freie Sicht und kann er Notizen ohne gefühlten Schadenszwang erreichen? Diese Korrekturrunde bleibt auf die separate Folienprobe begrenzt. Nach der Rückmeldung bewusst entscheiden: behalten, weitere Änderung als eigenen Abschnitt planen oder parken. Keine weiteren Bossphasen oder finale Jörg-Grafik vor dieser Entscheidung. Eine Übernahme des kompakten HUD ins Herne-Hauptspiel folgt als eigener kleiner Abschnitt nach Bewertung. Übrige 0.2-Kriterien und echte iPhone-Hardwareprüfung bleiben offen; App-Verpackung bleibt separat.
 
 ## Fachlicher Hintergrund
 

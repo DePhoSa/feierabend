@@ -12,7 +12,7 @@ Pro Eintrag erfassen wir Herkunft, erhofften Nutzen, kleinsten sinnvollen Test u
 
 | ID | Idee / Herkunft | Nutzen / kleinster Test | Stand |
 | --- | --- | --- | --- |
-| I-001 | Geschäftsleiter als liebevoll ironische Bosse. **Nutzeridee.** | Erste 45-Sekunden-Probe: gestrichelte Vorwarnung, aktive Folie kostet Geduld, drei grüne Notizen klären Punkte. Vorhandene blaue Figur als Platzhalter. | Spielprobe umgesetzt und technisch geprüft; Nutzerfeedback zu Verständnis, Spaß und Jörg-Ton offen. Keine weiteren Phasen vor Bewertung. |
+| I-001 | Geschäftsleiter als liebevoll ironische Bosse. **Nutzeridee.** | Erste 45-Sekunden-Probe: gestrichelte Vorwarnung, aktive Folie kostet Geduld, drei grüne Notizen klären Punkte. Vorhandene blaue Figur als Platzhalter. | Nutzer: Idee witzig und passend, aber zu hektisch, Folien zu lange aktiv, Geduldsverlust zu schnell und Handybild zu voll. Eine begrenzte Korrekturrunde: längere Vorwarnung/Pausen, kürzere kleinere Folie, halber Geduldsverlust, dauerhafte Notizen und kompaktes Probe-HUD. Erneute Bewertung vor weiteren Phasen. |
 | I-002 | Sprüche passend zum Ereignis statt hauptsächlich zufällig. **Entwicklungsvorschlag auf Grundlage der gelieferten Sprüche.** | Die Pointe trifft: „Seite 2“ zur Preisliste, „Containerschiff“ zur Lieferzeit. Kleiner Test mit drei Ereignissen und Sprechpausen. | Vorschlag für 0.2/0.3 |
 | I-003 | „Nur ganz kurz“-Kunden kündigen eine Nachfrage sichtbar an. **Entwicklungsvorschlag.** | Eine erkennbare Entscheidung statt nur mehr Geschwindigkeit oder Beratungsbedarf. Ein Kundentyp mit Vorwarnung; testen, ob man sein Verhalten ohne Erklärung versteht. | Vorschlag für 0.2 |
 | I-004 | Tor-Floß am Kanal. **Vorheriger Entwicklungsvorschlag, vom Nutzer grundsätzlich positiv aufgenommen.** | Verbindet Originalspruch, Produkt und Reise. Erst in einer einfachen Probe klären, ob Steuern und Helfen auf dem Floß Spaß machen. | Kandidat für Kapitel 2, kein fertiges Konzept |
@@ -22,6 +22,8 @@ Pro Eintrag erfassen wir Herkunft, erhofften Nutzen, kleinsten sinnvollen Test u
 | I-008 | Waltrop wird beim Ankommen Schritt für Schritt warm und freundlich. **Nutzerwelt + Entwicklungsvorschlag für die Umsetzung.** | Die Heimreise erhält eine fühlbare Belohnung. Erst ein kurzer spielbarer Übergang; keine lange Filmsequenz vorab. | Kandidat für Kapitel 3 |
 | I-009 | Auf dem iPhone als App starten. **Nutzerwunsch; Web-App als Entwicklungsempfehlung.** | Home-Bildschirm-Symbol und eigener App-Modus ohne Apple-Entwicklergebühr; zuerst Installation und gespeicherten Fortschritt auf echtem iPhone prüfen. Offline und Updates als eigene Aufgabe. | Plattformvergleich in PLATTFORMEN.md; noch nicht umgesetzt |
 | I-010 | KI-Idee hilft beim langen Chefgespräch. **Entwicklungsvorschlag zum Nutzerbriefing.** | KI-Interesse als Unterstützung für Dennis, rein geskriptet und ohne externe KI-Kosten. Erst nach Test des einfachen Gesprächsmusters ausarbeiten. | Idee; keine zusätzliche erste Probe |
+
+| I-011 | Mehr freie Spielfläche auf Handys. **Nutzerfeedback; kompakte Umsetzung durch Entwicklung.** | In der Folienprobe nur Geduld, Zeit/Notizen, Pause und ein aktueller Hinweis. Hilfe, Ton und Navigation in die Pause. Erst bewerten, danach eine passende Übernahme ins Herne-Hauptspiel planen. | In der Probe umgesetzt; keine globale Umgestaltung des Hauptspiels in dieser Korrekturrunde. |
 
 ## Ideenkarte zum Ausfüllen
 
@@ -70,3 +72,7 @@ Ein Boss muss kein Bösewicht sein. Er kann eine Feierabendfreigabe prüfen, ein
 | 16.10.2026 | Erstes Bossbriefing und Foto sichern; daraus einen prüfbaren Vorschlag erstellen | Nutzerinhalt lokal festgehalten; noch keine vollständige Bossproduktion |
 | 16.10.2026 | Älteres iPhone als Zielklasse; zunächst PC und Nutzer-Android für echte Tests verfügbar | Kein eigenes iPhone-Testgerät. Altersangabe ungefähr sechs Jahre, konkretes Modell/iOS offen. Echte iPhone-Spielrunde vor 1.0 einplanen. |
 | 16.10.2026 | Fahrplan als Arbeitsrahmen angenommen; erster kleiner Folientest | Nutzer: „machen wir weiter, die roadmap klingt super“. Eine Mechanikprobe mit vorhandenem Material; Produktionsgrafik folgt erst nach Bewertung. |
+
+| 16.10.2026 | Folienidee gezielt beruhigen und mobiles Probe-HUD reduzieren | Nutzerfeedback: grundsätzlich super/witzig, aber hektisch, lange aktive Fläche, schneller Schaden und zu volle Handyansicht. Eine Korrekturfassung statt weiterer Bossphasen. |
+
+| 16.10.2026 | Abschließende Live-Tests durch den Nutzer | Nutzer möchte Tokenkosten senken. Entwicklung prüft Quellcode, Syntax und vorhandene Logiktests; keine weiteren eigenständigen Browserdurchläufe. Kurze Testliste zur Übergabe; Regel in AGENTS.md. |
