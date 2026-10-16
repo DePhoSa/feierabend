@@ -53,4 +53,5 @@ Spielgefühl: Nur der Nutzer kann beurteilen, ob die Korrektur den gewünschten 
 Neue verbindliche Testzuständigkeit: Der Nutzer übernimmt ab jetzt die abschließenden Live-/Browser- und Spielgefühltests, um Tokenkosten zu sparen. Die oben protokollierten Durchläufe fanden vor seiner Entscheidung statt; danach keine weiteren Live-Tests. Entwicklung beschränkt sich auf Quellcodeanalyse, Syntax und passende vorhandene Logiktests, sofern nicht ausdrücklich anders beauftragt.
 
 Kurze Testliste für die Übergabe: (1) Notiz während einer aktiven Folie kurz liegen lassen und danach holen; angenehmer Rhythmus? (2) Auf dem Handy freie Sicht, Statusleiste und Steuerkreis beurteilen. (3) Runde beenden, Pause/Ton und Neustart ausprobieren. Weitere Bossproduktion erst nach Bewertung.
-`nAbschließende technische Prüfung: 17 Logiktests, JavaScript-Syntax aller vier Module und git diff --check bestanden. Darunter ein vollständiger vorsichtiger Simulationsdurchlauf, der Notizen ausschließlich in Folienpausen sammelt.
+
+Abschließende technische Prüfung: 17 Logiktests, JavaScript-Syntax aller vier Module und git diff --check bestanden. Darunter ein vollständiger vorsichtiger Simulationsdurchlauf, der Notizen ausschließlich in Folienpausen sammelt.
