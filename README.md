@@ -2,6 +2,10 @@
 
 Ein liebevoller Pixel-Survivor-Prototyp mit Dennis Ressemann. Kunden wird geholfen; niemand wird getötet. Ausgangspunkt: Hörmann Herne, Schlossstraße 30. Inoffizielle Parodie, keine offizielle Hörmann-Veröffentlichung.
 
+**Online spielen:** https://dephosa.github.io/feierabend-survivors/
+
+**Repository:** https://github.com/DePhoSa/feierabend-survivors
+
 ## Spielen
 
 WASD oder Pfeiltasten bewegen Dennis. Auf Touchgeräten den Steuerkreis ziehen. Hilfsmittel beraten automatisch. Grüne Danke-Punkte einsammeln, bei Aufstiegen eine Verbesserung wählen. P/Escape pausiert. Nach Schichtende das letzte große Anliegen lösen und den grünen Ausgang oben erreichen.

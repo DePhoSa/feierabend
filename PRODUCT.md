@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Vom Nutzer bestätigt: eigenständiges HTML/JavaScript-Spiel ohne Login und Datenbank. Hosting auf GitHub Pages; ein Repository besteht noch nicht. Konkrete Rendering-Bibliothek noch offen.
+Vom Nutzer bestätigt: eigenständiges HTML/JavaScript-Spiel ohne Login und Datenbank. Umsetzung mit Canvas 2D und ES-Modulen ohne externe Laufzeitabhängigkeiten. Hosting auf GitHub Pages; Repository: https://github.com/DePhoSa/feierabend-survivors.
 
 ## Product Purpose
 
@@ -25,7 +25,7 @@ Zielpublikum noch nicht ausdrücklich eingegrenzt; Humor basiert auf Dennis und 
 - Büroartikel und absurde Vertriebsfähigkeiten statt tödlicher Waffen.
 - Hörmann ThermoSafe, LPU 42, Schwingtore N80/F80 einbeziehen.
 - Stilwahl am 16.10.2026 bestätigt: Bild 3, detailreiche Retro-Pixelgrafik. Spielbarer Prototyp ist freigegeben.
-- Noch nichts veröffentlicht und noch kein Repository angelegt.
+- Erster spielbarer Arena-Prototyp umgesetzt; GitHub-Pages-Bereitstellung eingerichtet unter https://dephosa.github.io/feierabend-survivors/.
 
 ## Brand Commitments
 

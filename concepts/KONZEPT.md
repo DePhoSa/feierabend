@@ -1,6 +1,6 @@
 # Feierabend ist nicht lagermäßig
 
-Arbeitstitel. Stand: 16. Oktober 2026. Konzeptphase; ausdrücklich noch keine Implementierung, bis der Nutzer einen Grafikstil ausgewählt hat.
+Ursprüngliches Konzept, Stand: 16. Oktober 2026. Anschließend wurde Grafikstil 3 vom Nutzer ausgewählt und der erste Arena-Prototyp umgesetzt. Aktueller Implementierungsumfang und Hosting-Link stehen in README.md; die folgenden Abschnitte dokumentieren die ursprüngliche Planung.
 
 ## Drei Grafikrichtungen
 
