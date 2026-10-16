@@ -1,6 +1,6 @@
 # Fahrplan bis Version 1.0
 
-Stand: 16. Oktober 2026. Arbeitsplan für ein gemeinsames privates Hobbyspiel. Inhaltliche Vorschläge sind unten ausdrücklich als Vorschläge bezeichnet; sie werden erst durch Nutzerentscheidungen zu verbindlichem Umfang. Versionsnummern benennen Ergebnisse, keine zugesagten Kalendertermine.
+Stand: 16. Oktober 2026. Der Nutzer hat den Fahrplan als Arbeitsrahmen bestätigt („machen wir weiter, die Roadmap klingt super“). Die angegebenen Inhaltszahlen sind weiterhin Planungsgrenzen, die wir anhand der Proben anpassen dürfen. Versionsnummern benennen Ergebnisse, keine zugesagten Kalendertermine.
 
 ## Aktueller Stand
 
@@ -9,12 +9,13 @@ Stand: 16. Oktober 2026. Arbeitsplan für ein gemeinsames privates Hobbyspiel. I
 - Gute Grundlage für die Entwicklung; noch kein fertiges Kampagnenspiel und kein bereits auf Spielspaß getestetes Referenzkapitel.
 - Prüfstand: sieben Simulationstests, erste Desktop-/Mobil-Browserprüfungen. Ein vollständiger manueller Sieg und echte Handy-Hardwaretests sind noch offen; Einzelheiten in TESTING.md.
 - Textkorrektur dieses Arbeitsabschnitts: „5 FOTOS. 0 MASSE.“ → „5 FOTOS. 0 MAẞE.“. Alle 16 Dennis-Sprüche auf relevante ß-/ss-Wörter geprüft; ß, ẞ und Umlaute im Zeichenvorrat der Pixelschrift nachgewiesen.
+- Erster 0.2-Arbeitsabschnitt umgesetzt: separate 45-Sekunden-Spielprobe „Nur ganz kurz, Dennis …“ mit angekündigten PowerPoint-Flächen und drei Notizen. Jörg nutzt ausdrücklich eine vorhandene Platzhalterfigur. Herne-Hauptspiel bleibt separat erreichbar. Technische Prüfung und erster vollständiger Tastaturdurchlauf bestanden; Nutzer-/Spielspaßfeedback steht noch aus. Meilenstein 0.2 dadurch noch nicht abgeschlossen.
 
 ## Bestätigte Leitplanken
 
 Die bestätigten Produktfakten stehen in PRODUCT.md: Browser, bisher ohne Login, Pixelgrafik aus Bild 3, kompetenter und freundlicher Dennis, Kunden helfen, absurde Büro-/Vertriebsfähigkeiten, Start in Herne, Ziel Waltrop. Der Nutzer möchte aktiv eigene Figuren, Situationen, Bosse und Sprüche einbringen; eigene Gestaltungsideen der Entwicklung sind ebenfalls erwünscht. Neue Features sollen gezielt geprüft werden, damit kein großer Aufwand an ungeprüfte Ideen gebunden wird.
 
-## Vorgeschlagener Umfang für 1.0 – noch zu bestätigen
+## Umfangsrahmen für 1.0
 
 Eine abgeschlossene, wiederholbare Feierabendreise von etwa 15–25 Minuten mit drei kompakten Kapiteln:
 
@@ -88,14 +89,14 @@ Zusätzlich notieren wir Rundendauer, erreichte Stufe, Verständnisprobleme und 
 | Noch offene Details zu realen Figuren | Nutzer liefert Hintergrund; keine Vorbilder erfinden |
 | Privat = Hobby oder Zugriffsschutz? | Beantwortet: privates Hobby, öffentlicher Link ausdrücklich okay; kein Zugriffsschutz. |
 | PC/Laptop oder gleichwertige Mobilunterstützung? | PC und Handy gleich wichtig. Nutzer nutzt Android, Kollegen iPhones. Kein eigenes iPhone-Testgerät; etwa sechs Jahre altes iPhone als Zielklasse, Modell/iOS noch unbekannt. Echte Geräteprüfung vor 1.0 erforderlich. |
-| Drei Kapitel / 15–25 Minuten / Umfangsgrenzen | Empfehlung dieses Plans; noch nicht bestätigt |
+| Drei Kapitel / 15–25 Minuten / Umfangsgrenzen | Fahrplan als Arbeitsrahmen bestätigt. Zahlen bleiben überprüfbare Planungsgrenzen; Änderungen bewusst festhalten. |
 | Titel | Bestehender Arbeitstitel; keine ausdrückliche endgültige Namensentscheidung |
 | Erster Boss | Nutzerbriefing und Foto eingegangen. Lokaler Figurenentwurf vorhanden; Mechanik und Rolle im Kapitel noch abzustimmen. |
 | iPhone-App | Nutzerinteresse bestätigt; Plattformvergleich erstellt. Empfehlung: Web-App als eigener kleiner Arbeitspunkt, native App bei konkretem Bedarf gesondert planen. |
 
 ## Nächster Arbeitsschritt
 
-**Nutzungskreis und Zielplattformen sind geklärt.** Das erste Figurenbriefing mit Foto ist lokal gesichert, ein konkreter Bossentwurf liegt zur gemeinsamen Bewertung vor. Den vorgeschlagenen 1.0-Umfang bestätigen und den ersten 0.2-Arbeitsabschnitt auswählen. Vorschlag: kurze Bestandsrunden auf PC und dem Android-Handy des Nutzers plus genau eine Probe für ein angekündigtes Gesprächs-/Folienmuster. Ein eigenes iPhone-Testgerät ist keine Voraussetzung für diesen nächsten Abschnitt. Modell/iOS des älteren Kollegen-iPhones später erheben und vor 1.0 dort tatsächlich spielen. App-Verpackung bleibt ein separater Arbeitspunkt; keine automatische Produktion aller Bossphasen oder neuer Kapitel.
+**Die erste Folienprobe bewerten.** Der Nutzer spielt möglichst je eine Runde am PC und auf seinem Android-Handy. Zwei Fragen: Ist die Vorwarnung verständlich? Macht das rechtzeitige Ausweichen samt Notizen Spaß und passt der Gesprächston zu Jörg? Ergebnis unter IDEEN.md I-001 festhalten: behalten, gezielt ändern oder parken. Vor dieser Rückmeldung keine weiteren Bossphasen und keine finale Jörg-Grafik produzieren. Die Proben veröffentlichen wir nach technischer Prüfung als separat erreichbare Testfassung; das bestätigt ihren Spielspaß nicht automatisch. Die übrigen 0.2-Abschlusskriterien bleiben offen. Modell/iOS des älteren Kollegen-iPhones später erheben und vor 1.0 dort tatsächlich spielen. App-Verpackung bleibt ein separater Arbeitspunkt.
 
 ## Fachlicher Hintergrund
 

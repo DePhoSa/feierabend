@@ -6,6 +6,8 @@ Ein liebevoller Pixel-Survivor-Prototyp mit Dennis Ressemann. Kunden wird geholf
 
 **Repository:** https://github.com/DePhoSa/feierabend-survivors
 
+**Neue Spielprobe:** https://dephosa.github.io/feierabend-survivors/probe.html — Jörgs kurze Besprechung: 45 Sekunden, drei Notizen, ein angekündigtes Folienmuster. Bestehende Grafik als ausdrücklicher Platzhalter; dient der gemeinsamen Bewertung vor dem weiteren Bossausbau.
+
 ## Gemeinsam weiterentwickeln
 
 Der Fahrplan und die Abschlusskriterien bis 1.0 stehen in [ROADMAP.md](ROADMAP.md). Nutzerideen, eigene Vorschläge und ihre Entscheidungen sammeln wir in [IDEEN.md](IDEEN.md). [AGENTS.md](AGENTS.md) hält die Arbeitsweise für weitere Entwicklungssitzungen fest. Neue Etappen und Umfangsziele sind Empfehlungen, bis sie gemeinsam bestätigt wurden.
@@ -29,9 +31,11 @@ Dann http://127.0.0.1:4173 öffnen. Alternativ kann jeder statische Server den O
 ## Prüfen
 
 ```sh
-node --test tests/core.test.mjs
+node --test tests/*.test.mjs
 node --check public/game.js
 node --check public/core.js
+node --check public/presentation.js
+node --check public/probe.js
 ```
 
 ## Veröffentlichung
@@ -45,6 +49,7 @@ GitHub Pages deployt den Ordner `public` durch `.github/workflows/pages.yml`, so
 - `public/style.css`: responsive Oberfläche und Touch-Steuerung.
 - `public/assets`: generierte Pixelgrafik und lokal bereitgestellte Schrift.
 - `tests/core.test.mjs`: Tests für Bewegung, Pause, Aufstiege, Abschluss, Geduld und eine längere Simulation.
+- `public/presentation.js`, `public/probe.js`, `public/probe.html`: isolierte Simulation und Oberfläche der ersten Folien-Spielprobe; `tests/presentation.test.mjs` prüft Vorwarnung, sichere Notizpositionen, Sieg, Scheitern und Neustart.
 - `concepts`: Konzept, Original-Sprüche, Bildentwürfe und Generierungsprotokolle.
 
 ## Umfang dieses Prototyps

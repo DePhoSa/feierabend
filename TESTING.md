@@ -27,3 +27,15 @@ Review-Ergebnis: **ship als erster spielbarer Arena-Prototyp**. Quellcode, Deskt
 ## Aktualisierte Geräteplanung
 
 Nutzer besitzt ein Android-Handy, kein eigenes iPhone-Testgerät. Kollegen-iPhone ungefähr sechs Jahre alt, Modell und iOS noch unbekannt. Nächste echte Rückmeldungen auf PC und Nutzer-Android einholen; iPhone-Leistung erst nach einer Spielrunde auf dem tatsächlichen Gerät bewerten. Touch-/Layoutsimulation und etwaige automatisierte WebKit-Tests getrennt vom Hardwaretest protokollieren. Kein zusätzlicher Gerätetest wurde durch diese Planaktualisierung durchgeführt.
+
+## Erste 0.2-Probe: Jörgs Folien
+
+14 Simulationstests bestanden: sieben bestehende Tests plus sieben neue Prüfungen für Start/Pause, schadensfreie Vorwarnung vor aktiver Folie, rechtzeitig erreichbare sichere Notizen an allen Hofgrenzen, vollständigen Durchlauf mit normaler Bewegung, fehlende Gesprächspunkte beim Zeitende, einmalige Notizvergabe/frischen Neustart und fraktionale Touch-Eingabe. Syntaxprüfung der neuen Module bestanden.
+
+Browserdurchlauf bei 1440×900: Probe tatsächlich mit normaler Tastaturbedienung und Pause-Kontrollpunkten bis zum Ende gespielt. Ergebnis: drei von drei Notizen, sechs vermiedene Folien, 100 Prozent Geduld. Keine simulierte Zustandsmanipulation oder vorgezogene Zeit. Standstill-Versuch scheitert an Geduld; Neustart und Pause/Fortsetzen geprüft.
+
+Bei 390×844: gedrückter Pointer auf dem Steuerkreis bewegt Dennis und sammelt die erste Notiz; Warnzustand, Timer, Rückmeldung, Pause und Ergebnisansicht geprüft. Kein horizontaler Überlauf im geprüften Zustand. Das ist eine schmale Browseransicht, kein Android-/iPhone-Hardwaretest. Keine Browser-Konsolenfehler in den beobachteten Durchläufen.
+
+Gefundene Canvas-Größenübernahme korrigiert; funktionale Schrift nicht unter 11px. Mechanischer Designcheck einmal ausgeführt; überwiegend geerbte Farb-/Schrift-Rampenabweichungen als Hinweise, kein Anlass zum Umbau der bestehenden Identität. Menschliche Spielspaßbewertung und Gerätefeedback stehen aus. Version 0.2 ist damit noch nicht vollständig abgenommen.
+
+Unabhängige Abschlussprüfung: **ship als begrenzte Spielprobe**, keine materiellen Blocker in Quelle und gelieferten Screenshots. In der Welt gerenderte Folientitel können teilweise von Figuren oder dem oberen HUD überlagert werden; als kosmetisch bewertet, weil separate Vorwarnung und Flächenränder verständlich bleiben. Design-Dokumentationsprüfung bestätigt die Übernahme des vorhandenen Systems; keine neuen globalen Tokens oder Komponenten nötig. Rückweg zum Hauptspiel und Einstieg über den neuen Menülink bei 390px ebenfalls geprüft.

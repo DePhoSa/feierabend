@@ -12,7 +12,7 @@ Pro Eintrag erfassen wir Herkunft, erhofften Nutzen, kleinsten sinnvollen Test u
 
 | ID | Idee / Herkunft | Nutzen / kleinster Test | Stand |
 | --- | --- | --- | --- |
-| I-001 | Geschäftsleiter als liebevoll ironische Bosse. **Nutzeridee.** | Erstes Figurenbriefing und Foto erhalten; lokal in private/ gesichert. Vorschlag: freundlichen Feierabendplausch mit einem einzigen angekündigten Folienmuster testen. | Konkreter lokaler Entwurf; Mechanik noch nicht bestätigt |
+| I-001 | Geschäftsleiter als liebevoll ironische Bosse. **Nutzeridee.** | Erste 45-Sekunden-Probe: gestrichelte Vorwarnung, aktive Folie kostet Geduld, drei grüne Notizen klären Punkte. Vorhandene blaue Figur als Platzhalter. | Spielprobe umgesetzt und technisch geprüft; Nutzerfeedback zu Verständnis, Spaß und Jörg-Ton offen. Keine weiteren Phasen vor Bewertung. |
 | I-002 | Sprüche passend zum Ereignis statt hauptsächlich zufällig. **Entwicklungsvorschlag auf Grundlage der gelieferten Sprüche.** | Die Pointe trifft: „Seite 2“ zur Preisliste, „Containerschiff“ zur Lieferzeit. Kleiner Test mit drei Ereignissen und Sprechpausen. | Vorschlag für 0.2/0.3 |
 | I-003 | „Nur ganz kurz“-Kunden kündigen eine Nachfrage sichtbar an. **Entwicklungsvorschlag.** | Eine erkennbare Entscheidung statt nur mehr Geschwindigkeit oder Beratungsbedarf. Ein Kundentyp mit Vorwarnung; testen, ob man sein Verhalten ohne Erklärung versteht. | Vorschlag für 0.2 |
 | I-004 | Tor-Floß am Kanal. **Vorheriger Entwicklungsvorschlag, vom Nutzer grundsätzlich positiv aufgenommen.** | Verbindet Originalspruch, Produkt und Reise. Erst in einer einfachen Probe klären, ob Steuern und Helfen auf dem Floß Spaß machen. | Kandidat für Kapitel 2, kein fertiges Konzept |
@@ -69,3 +69,4 @@ Ein Boss muss kein Bösewicht sein. Er kann eine Feierabendfreigabe prüfen, ein
 | 16.10.2026 | PC und Handy gleich wichtig | Ergänzte Nutzerantwort: Kollegen mit iPhones, Nutzer selbst mit Android; beide mobilen Wege berücksichtigen |
 | 16.10.2026 | Erstes Bossbriefing und Foto sichern; daraus einen prüfbaren Vorschlag erstellen | Nutzerinhalt lokal festgehalten; noch keine vollständige Bossproduktion |
 | 16.10.2026 | Älteres iPhone als Zielklasse; zunächst PC und Nutzer-Android für echte Tests verfügbar | Kein eigenes iPhone-Testgerät. Altersangabe ungefähr sechs Jahre, konkretes Modell/iOS offen. Echte iPhone-Spielrunde vor 1.0 einplanen. |
+| 16.10.2026 | Fahrplan als Arbeitsrahmen angenommen; erster kleiner Folientest | Nutzer: „machen wir weiter, die roadmap klingt super“. Eine Mechanikprobe mit vorhandenem Material; Produktionsgrafik folgt erst nach Bewertung. |
