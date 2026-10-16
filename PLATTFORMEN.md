@@ -1,6 +1,6 @@
 # PC, iPhone und mögliche App
 
-Stand: 16. Oktober 2026. Nutzer bestätigt: privates Hobby, öffentlicher Link okay; PC und iPhone gleich wichtig. Android ist in der Kollegenrunde aktuell keine eigene Zielpriorität. Native iOS-App ist ein Wunsch zum Prüfen, kein beschlossener paralleler Produktionsauftrag.
+Stand: 16. Oktober 2026. Nutzer bestätigt: privates Hobby, öffentlicher Link okay; PC und Handy gleich wichtig. Kollegen nutzen iPhones, Nutzer nutzt Android. Kein eigenes iPhone-Testgerät vorhanden. Ein ungefähr sechs Jahre altes iPhone soll unterstützt werden; Modell und iOS-Version sind noch unbekannt. Native iOS-App ist ein Wunsch zum Prüfen, kein beschlossener paralleler Produktionsauftrag.
 
 ## Empfehlung für dieses Projekt
 
@@ -34,10 +34,15 @@ Vorgeschlagener Zeitpunkt: nach der ersten stabilen Mobil-Spielprobe; unabhängi
 ## Geräteprüfung für 1.0
 
 - PC: aktuelle Versionen von Chrome und Edge, zusätzlich Firefox als Ziel für die Browserprüfung. Tastatur, Fenstergrößen und Pause prüfen.
-- iPhone: Safari und Home-Bildschirm-Modus auf dem eigenen Gerät und möglichst dem ältesten Gerät der Runde. Modelle/iOS-Versionen sind angefragt, noch keine Mindestversion festgelegt.
-- Für beide: neue und vorhandene Spielstände, eine vollständige Runde, Sieg, Scheitern, Neustart, Aufstiegswahl und Ton prüfen.
+- Android: manuelle Spieltests auf dem Handy des Nutzers, zunächst im tatsächlich verwendeten Browser. Modell, Browser und Betriebssystem sind noch nicht protokolliert. Zusätzliche Tests im Home-Bildschirm-Modus, sobald dieser umgesetzt ist.
+- iPhone: Safari und Home-Bildschirm-Modus möglichst auf dem ungefähr sechs Jahre alten Gerät der Kollegenrunde. Der Nutzer hat kein eigenes iPhone-Testgerät. Modell/iOS-Version später am tatsächlichen Gerät erfassen; keine konkrete Modellreihe aus der Altersangabe ableiten und noch keine Mindestversion festlegen.
+- Für alle Zielgeräte: neue und vorhandene Spielstände, eine vollständige Runde, Sieg, Scheitern, Neustart, Aufstiegswahl und Ton prüfen.
 - Leistung nach Gerätewahl konkret festlegen. Arbeitsziel als Vorschlag: auf dem ältesten Ziel-iPhone mindestens 30 Bilder pro Sekunde in der dichten Spielsituation; noch nicht gemessen und keine derzeitige Zusage.
-- Android erhält keine eigene Abnahmeforderung, solange sich der Nutzungskreis nicht ändert.
+- Bis ein iPhone-Test möglich ist: Touch- und Layoutprüfungen im Browser plus echte Android-Rückmeldungen nutzen. Automatisierte Browser-/WebKit-Prüfungen bei Bedarf ergänzen; diese belegen weder iPhone-Leistung noch alle Safari-/iOS-Eigenheiten. Vor 1.0 eine kurze echte Spielrunde auf dem älteren iPhone organisieren; kein Gerätekauf für den nächsten Entwicklungsschritt nötig.
+
+## Planung für ältere Handys
+
+Sparsame Effekte und begrenzte gleichzeitige Spielobjekte von Anfang an berücksichtigen. Einfache Grafik-/Effektstufen bei gemessenen Engpässen als kleinen eigenen Arbeitspunkt vorsehen; nicht allein aufgrund des Gerätealters neue Systeme bauen. Rundendauer, dichte Kundensituationen, Temperaturentwicklung und Touch-Reaktion im echten Spiel testen. Die Zielklasse „etwa sechs Jahre alt“ ist noch keine pauschale Zusage für jedes damalige iPhone und jede iOS-Version.
 
 ## Apple-Quellen
 

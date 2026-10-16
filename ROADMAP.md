@@ -87,7 +87,7 @@ Zusätzlich notieren wir Rundendauer, erreichte Stufe, Verständnisprobleme und 
 | Gemeinsamer Fahrplan und Beiträge beider Seiten | Vom Nutzer ausdrücklich gewünscht |
 | Noch offene Details zu realen Figuren | Nutzer liefert Hintergrund; keine Vorbilder erfinden |
 | Privat = Hobby oder Zugriffsschutz? | Beantwortet: privates Hobby, öffentlicher Link ausdrücklich okay; kein Zugriffsschutz. |
-| PC/Laptop oder gleichwertige Mobilunterstützung? | Beantwortet: PC und iPhone gleich wichtig. Konkrete Modelle/iOS-Versionen werden noch erfragt. Android keine eigene Priorität für diese Runde. |
+| PC/Laptop oder gleichwertige Mobilunterstützung? | PC und Handy gleich wichtig. Nutzer nutzt Android, Kollegen iPhones. Kein eigenes iPhone-Testgerät; etwa sechs Jahre altes iPhone als Zielklasse, Modell/iOS noch unbekannt. Echte Geräteprüfung vor 1.0 erforderlich. |
 | Drei Kapitel / 15–25 Minuten / Umfangsgrenzen | Empfehlung dieses Plans; noch nicht bestätigt |
 | Titel | Bestehender Arbeitstitel; keine ausdrückliche endgültige Namensentscheidung |
 | Erster Boss | Nutzerbriefing und Foto eingegangen. Lokaler Figurenentwurf vorhanden; Mechanik und Rolle im Kapitel noch abzustimmen. |
@@ -95,7 +95,7 @@ Zusätzlich notieren wir Rundendauer, erreichte Stufe, Verständnisprobleme und 
 
 ## Nächster Arbeitsschritt
 
-**Nutzungskreis und Zielplattformen sind geklärt.** Das erste Figurenbriefing mit Foto ist lokal gesichert, ein konkreter Bossentwurf liegt zur gemeinsamen Bewertung vor. Als Nächstes die echten iPhone-Testgeräte festlegen, den vorgeschlagenen 1.0-Umfang bestätigen und den ersten 0.2-Arbeitsabschnitt auswählen. Vorschlag: kurze Bestandsrunden plus genau eine Probe für ein angekündigtes Gesprächs-/Folienmuster. App-Verpackung bleibt ein separater Arbeitspunkt; keine automatische Produktion aller Bossphasen oder neuer Kapitel.
+**Nutzungskreis und Zielplattformen sind geklärt.** Das erste Figurenbriefing mit Foto ist lokal gesichert, ein konkreter Bossentwurf liegt zur gemeinsamen Bewertung vor. Den vorgeschlagenen 1.0-Umfang bestätigen und den ersten 0.2-Arbeitsabschnitt auswählen. Vorschlag: kurze Bestandsrunden auf PC und dem Android-Handy des Nutzers plus genau eine Probe für ein angekündigtes Gesprächs-/Folienmuster. Ein eigenes iPhone-Testgerät ist keine Voraussetzung für diesen nächsten Abschnitt. Modell/iOS des älteren Kollegen-iPhones später erheben und vor 1.0 dort tatsächlich spielen. App-Verpackung bleibt ein separater Arbeitspunkt; keine automatische Produktion aller Bossphasen oder neuer Kapitel.
 
 ## Fachlicher Hintergrund
 

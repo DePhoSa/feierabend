@@ -23,3 +23,7 @@ Review-Ergebnis: **ship als erster spielbarer Arena-Prototyp**. Quellcode, Deskt
 - Kein Screenreader-komplett bedienbares Actionspiel; Menüs sind semantisch, per Tastatur und mit Fokusführung bedienbar.
 - Spielbalance benötigt Feedback von echten Spielern, insbesondere über die volle Sechs-Minuten-Schicht.
 - Einzel-Sprites mit Schrittbewegung statt vollständiger mehrteiliger Animationszyklen.
+
+## Aktualisierte Geräteplanung
+
+Nutzer besitzt ein Android-Handy, kein eigenes iPhone-Testgerät. Kollegen-iPhone ungefähr sechs Jahre alt, Modell und iOS noch unbekannt. Nächste echte Rückmeldungen auf PC und Nutzer-Android einholen; iPhone-Leistung erst nach einer Spielrunde auf dem tatsächlichen Gerät bewerten. Touch-/Layoutsimulation und etwaige automatisierte WebKit-Tests getrennt vom Hardwaretest protokollieren. Kein zusätzlicher Gerätetest wurde durch diese Planaktualisierung durchgeführt.

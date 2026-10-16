@@ -66,5 +66,6 @@ Ein Boss muss kein Bösewicht sein. Er kann eine Feierabendfreigabe prüfen, ein
 | 16.10.2026 | Erste spielbare Herne-Arena veröffentlichen | Nutzerauftrag; GitHub Pages eingerichtet |
 | 16.10.2026 | Neue Ideen gemeinsam über einen Fahrplan entwickeln und vor großem Ausbau prüfen | Aktueller Nutzerauftrag; Arbeitsweise in AGENTS.md, vorgeschlagene Etappen in ROADMAP.md |
 | 16.10.2026 | Öffentlicher Link bleibt für das private Hobbyspiel okay | Nutzerantwort; keine Zugriffsumstellung nötig |
-| 16.10.2026 | PC und iPhone gleich wichtig | Nutzerantwort; Android derzeit keine eigene Zielpriorität |
+| 16.10.2026 | PC und Handy gleich wichtig | Ergänzte Nutzerantwort: Kollegen mit iPhones, Nutzer selbst mit Android; beide mobilen Wege berücksichtigen |
 | 16.10.2026 | Erstes Bossbriefing und Foto sichern; daraus einen prüfbaren Vorschlag erstellen | Nutzerinhalt lokal festgehalten; noch keine vollständige Bossproduktion |
+| 16.10.2026 | Älteres iPhone als Zielklasse; zunächst PC und Nutzer-Android für echte Tests verfügbar | Kein eigenes iPhone-Testgerät. Altersangabe ungefähr sechs Jahre, konkretes Modell/iOS offen. Echte iPhone-Spielrunde vor 1.0 einplanen. |
