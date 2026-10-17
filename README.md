@@ -2,11 +2,11 @@
 
 Ein liebevoller Pixel-Survivor-Prototyp mit Dennis Ressemann. Kunden wird geholfen; niemand wird getötet. Ausgangspunkt: Hörmann Herne, Schlossstraße 30. Inoffizielle Parodie, keine offizielle Hörmann-Veröffentlichung.
 
-**Online spielen:** https://dephosa.github.io/feierabend-survivors/
+**Online spielen:** https://dephosa.github.io/feierabend/
 
-**Repository:** https://github.com/DePhoSa/feierabend-survivors
+**Repository:** https://github.com/DePhoSa/feierabend
 
-**Neue Spielprobe:** https://dephosa.github.io/feierabend-survivors/probe.html — Jörgs kurze Besprechung: 45 Sekunden, drei Notizen, ein angekündigtes Folienmuster. Bestehende Grafik als ausdrücklicher Platzhalter; dient der gemeinsamen Bewertung vor dem weiteren Bossausbau.
+**Neue Spielprobe:** https://dephosa.github.io/feierabend/probe.html — Jörgs kurze Besprechung: 45 Sekunden, drei Notizen, ein angekündigtes Folienmuster. Bestehende Grafik als ausdrücklicher Platzhalter; dient der gemeinsamen Bewertung vor dem weiteren Bossausbau.
 
 ## Gemeinsam weiterentwickeln
 
@@ -65,3 +65,5 @@ Die Folienprobe besitzt eine ruhigere Korrekturfassung (`0.2.0-preview.2`): kür
 Aktuelle Spielprobe `0.2.0-preview.3`: Jörg geht zwischen Erzählplätzen, hält für seine Folie an und hinterlässt anschließend eine Notiz. Drei Pausenstufen ziehen das Tempo zum Ende an. Technisch geprüft; die Live-Abnahme übernimmt der Nutzer (IDEEN.md I-012). Vorherige Ruhefassung bleibt in Git bei `e88c1f9` nachvollziehbar.
 
 `0.2.0-preview.4` ergänzt auf Nutzerwunsch Jörgs sichtbaren Abstandskreis: nach kurzer Reaktionszeit kostet Nähe Geduld, auch beim Gehen. Geh-/Erzählmuster vorläufig beibehalten; nächster Roadmap-Schwerpunkt ist das kompakte HUD der normalen Herne-Runde.
+
+`0.2.0-preview.5` überträgt das schlanke HUD auf das Herne-Hauptspiel: Ausblenden der Topbar während der Schicht (volle 100svh Spielfläche), kompakter oberer Statusstreifen für Geduld, XP, Uhr und Pause sowie Verlagerung von Tonwahl, Steuerungshinweisen, Neustart und Menüführung in das Pausenmenü. Repository auf `DePhoSa/feierabend` umgestellt.
