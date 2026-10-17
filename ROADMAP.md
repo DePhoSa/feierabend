@@ -13,6 +13,7 @@ Stand: 16. Oktober 2026. Der Nutzer hat den Fahrplan als Arbeitsrahmen bestätig
 - Version 0.2.0-preview.5 umgesetzt: Kompaktes HUD aus der Probe auf die normale Herne-Runde übertragen. Topbar im Spiel ausgeblendet (volle 100svh Spielfläche auf PC und Handy), schlanke Statusleiste am oberen Rand (Geduld, XP, Uhr, Pause), dezentere Banner für Schichtziel und Boss, Tonwahl, Steuerungshinweise, Schicht-Neustart und Menürückkehr ins Pausenmenü verlagert. Repository auf `DePhoSa/feierabend` umgestellt.
 - Version 0.2.0-preview.6 umgesetzt: Ziffern-Lesbarkeit korrigiert (Schichtuhr, Geduld und Dialogzahlen nutzen gestochen scharfen Monospace-Schriftsatz statt klobiger Pixelglyphen). Permanente Spruchbox im Spiel entfernt für maximalen Freiraum unten; Dennis' Sprüche erscheinen passend als Sprechblase im Level-Up-Dialog und bei Ausrüstungswahl (I-002). Hilfsmittel skalieren spürbar (Tacker ab Stufe 3/5 mit 2 bzw. 3 Klammern; Seite-2-Bumerang ab Stufe 2 mit 2 rotierenden Preislisten; Treffer erzeugen feines Beratungs-Feedback). 20/20 Tests bestanden. Meilenstein 0.2 bleibt offen für die Nutzerabnahme.
 - Version 0.2.0-preview.7 umgesetzt: Typografie-Generalüberholung zur Beseitigung unleserlicher Ligaturen (Pixelify Sans durch die saubere Indie-Arcade-Schrift 'Chakra Petch' ersetzt; Ziffern gestochen scharf; "Konfigurator" und "Bumerang" fehlerfrei lesbar). Mitten-Spruch-Spam während des Spiels vollständig entfernt (Dennis' Zitate erscheinen exklusiv im Aufstiegs-/Upgrade-Dialog). Versionsanzeige im Hauptmenü (`.prototype`) synchronisiert und als verbindliche Entwicklungsregel in `AGENTS.md` verankert. 20/20 Tests bestanden.
+- Version 0.2.0-preview.8 umgesetzt: Schichtziel-Banner („Schlossstraße 30 …“) nach 5 Sekunden sanft ausgeblendet für maximale freie Sicht; erscheint nur bei Phasenwechseln kurz wieder. Meilenstein 0.2 vom Nutzer erfolgreich abgenommen („ansonsten war der test erfoglreich. wir können also weiter machen“).
 
 ## Bestätigte Leitplanken
 
@@ -36,7 +37,7 @@ Größere spätere Wünsche wie weitere spielbare Kollegen, zusätzliche Welten 
 
 | Etappe | Spielbares Ergebnis | Woran wir den Abschluss erkennen |
 | --- | --- | --- |
-| **0.2 – Spielgefühl beweisen** | Eine kurze Herne-Runde mit klaren Trefferrückmeldungen, verständlichem Sammeln und merklich verschiedenen Aufwertungen. Ein kleines Experiment für besondere Kundenaufgaben. | Zwei bis drei Personen verstehen ohne mündliche Erklärung Bewegung, Helfen und Aufstieg; jede testet mehrere Runden. Feedback benennt spannende, zähe und unklare Momente. Ein vollständiger manueller Sieg und ein absichtliches Scheitern sind geprüft. Wir legen anhand der Tests fest, was bleibt. |
+| **0.2 – Spielgefühl beweisen** (Erreicht & bestätigt) | Eine kurze Herne-Runde mit klaren Trefferrückmeldungen, verständlichem Sammeln und merklich verschiedenen Aufwertungen. Ein kleines Experiment für besondere Kundenaufgaben. | Spielgefühl, HUD, freie Sicht, skalierende Fähigkeiten und Typografie vom Nutzer getestet und abgenommen. |
 | **0.3 – Herne als Referenzkapitel** | Herne von Start bis Ende im angestrebten Qualitätsniveau, mit einer gemeinsam entworfenen Bossbegegnung, passenden Sprüchen, brauchbaren Animationen und Ton. Das ist unser „Vertical Slice“: ein kleines vollständiges Stück des späteren Spiels. | Der Boss ist vor dem Auftreten angekündigt, sein Muster erkennbar und sein Abschluss verständlich. Das Kapitel funktioniert mit den vorgesehenen Eingaben und kann neu gestartet werden. Wir wissen, welche Arbeit ein weiteres Kapitel wirklich erfordert. Erst jetzt belastbar Aufwand für den Rest schätzen. |
 | **0.5 – Ganze Reise spielbar** | Herne → Kanal → Waltrop samt Ankunft. Neue Kapitel zunächst mit einfacher Gestaltung, aber ihren eigenen Aufgaben. Fortschritt bleibt lokal erhalten. | Eine Person kann die gesamte Reise vom neuen Spielstand bis zum Ende abschließen. Übergänge, Rückkehr nach Pause und Kapitelneustart funktionieren. Noch fehlende Produktionsgrafiken sind benannt. |
 | **0.7 – Inhalt vollständig / Alpha** | Vereinbarte Figuren, Kundentypen, Hilfsmittel, Kombinationen, Bossmuster, Story, Grafik und Audio sind enthalten. | Der vereinbarte 1.0-Umfang ist umgesetzt oder ausdrücklich verkleinert. Keine offene Kernmechanik. Texte und Figuren stimmen mit deinen Vorgaben überein. Ab hier werden keine neuen großen Funktionen aufgenommen. |
@@ -101,14 +102,16 @@ Zusätzlich notieren wir Rundendauer, erreichte Stufe, Verständnisprobleme und 
 
 ## Nächster Arbeitsschritt
 
-**Nutzertest zu 0.2.0-preview.7 (Neue Schriftart 'Arcade / Chakra Petch', lesbare Texte & freier Bildschirm).**
-Der Nutzer prüft im Live-Spiel:
-1. **Lesbarkeit der neuen Schrift:** Sind alle deutschen Wörter (z. B. "Konfigurator", "Bumerang") und Zahlen (Schichtuhr, Geduld in %) einwandfrei lesbar, ohne verwaschene Ligaturen oder zu fette Glyphen?
-2. **Freie Spielfläche ohne Mitten-Spam:** Bleibt das aktive Spielgeschehen frei von plötzlichen Spruch-Einblendungen in der Bildschirmmitte?
-3. **Dennis' Zitate bei Level-Up:** Erscheinen die Zitate übersichtlich und stimmig direkt im Aufstiegs-/Upgrade-Dialog neben Dennis' Porträt?
-4. **Versionsanzeige im Menü:** Zeigt das Hauptmenü oben rechts korrekt `SPIELBARER PROTOTYP · 0.2.0-preview.7` an?
+**Beginn Meilenstein 0.3: Herne als Referenzkapitel („Vertical Slice“ mit Bossbegegnung).**
+Meilenstein 0.2 wurde vom Nutzer erfolgreich abgenommen („ansonsten war der test erfoglreich. wir können also weiter machen“).
+In Version 0.2.0-preview.8 wurde der letzte optische Wunsch umgesetzt: Das Banner („Schlossstraße 30 …“) blendet sich nach 5 Sekunden sanft aus, sodass der Bildschirm maximal frei bleibt.
 
-Nach der Bestätigung: Abschluss von Meilenstein 0.2 und Übergang zu Meilenstein 0.3 (Herne als Vertical Slice / Referenzkapitel mit vollständiger Bossbegegnung).
+Für Meilenstein 0.3:
+1. **Boss-Muster final festlegen:** Übernahme der bewährten Mechanik aus der Jörg-Probe (Gehen, Erzählen, Distanz halten, Notizen sammeln / Punkte klären).
+2. **Integration in die Herne-Runde:** Boss erscheint nach Ablauf der regulären Schichtzeit bzw. in der finalen Phase als Abschluss-Herausforderung, bevor der grüne Ausgang nach Waltrop frei wird.
+3. **Boss-Visualisierung & Sprüche:** Passende Vorankündigung und Dialoge für Dennis und den Boss.
+
+Nach kurzer Abstimmung der nächsten Details starten wir mit der technischen Integration des Bossmusters in die Hauptrunde.
 
 ## Fachlicher Hintergrund
 
