@@ -51,15 +51,21 @@ function showToast(text,seconds=2){$('toast').textContent=text;$('toast').classL
 function showObjective(text,seconds=5){$('objective').textContent=text;$('objective').classList.add('visible');objectiveUntil=performance.now()+seconds*1000;}
 function updateBelt(){const equipped=Object.keys(game.skills).filter(k=>k!=='coffee'&&game.skills[k]>0);$('tools').innerHTML=equipped.map(k=>`<div class="tool-slot" title="${UPGRADES[k].name} · Stufe ${game.skills[k]}" aria-label="${UPGRADES[k].name}, Stufe ${game.skills[k]}">${icon(k)}<span>${game.skills[k]}</span></div>`).join('')+Array.from({length:Math.max(0,4-equipped.length)},()=>`<div class="tool-slot empty" aria-label="Noch freier Platz">${icon('empty')}</div>`).join('');}
 const phases=['Nur eine kurze Frage','Ersatzteil-Ansturm','Lieferzeit-Diskussion','Wo ist die Glühbirne?','Das letzte große Anliegen'];
-function updateHUD(){if(!game)return;const percent=Math.ceil(game.player.hp/game.player.maxHp*100);$('patience-number').textContent=`${percent} %`;$('patience-fill').style.width=`${percent}%`;$('patience-fill').style.background=percent<30?'#ff9b78':'#94e3b3';$('patience-meter').setAttribute('aria-valuenow',String(percent));$('xp-fill').style.width=`${Math.min(100,game.xp/game.needed*100)}%`;$('xp-label').textContent=`${game.xp} / ${game.needed}`;$('level-label').textContent=`LV. ${game.level}`;const left=Math.max(0,Math.ceil(game.duration-game.time));$('timer').textContent=`${Math.floor(left/60).toString().padStart(2,'0')}:${(left%60).toString().padStart(2,'0')}`;$('helped').textContent=`${game.solved} Kunden geholfen`;$('wave-label').textContent=game.exitOpen?'Der Weg ist frei':phases[Math.max(0,game.phase)];const objText=game.exitOpen?'Ab nach Waltrop! Geh zum grünen Ausgang oben im Hof.':game.progress>=1?'Fast Feierabend: Löse noch das große Anliegen.':'Schlossstraße 30 · Halte bis zum Feierabend durch.';if(objText!==lastObjective){lastObjective=objText;showObjective(objText,game.exitOpen?8:5);}const boss=game.boss;$('boss-panel').hidden=!boss;if(boss)$('boss-fill').style.width=`${Math.max(0,(1-boss.hp/boss.maxHp)*100)}%`;}
+function updateHUD(){if(!game)return;const percent=Math.ceil(game.player.hp/game.player.maxHp*100);$('patience-number').textContent=`${percent} %`;$('patience-fill').style.width=`${percent}%`;$('patience-fill').style.background=percent<30?'#ff9b78':'#94e3b3';$('patience-meter').setAttribute('aria-valuenow',String(percent));$('xp-fill').style.width=`${Math.min(100,game.xp/game.needed*100)}%`;$('xp-label').textContent=`${game.xp} / ${game.needed}`;$('level-label').textContent=`LV. ${game.level}`;const left=Math.max(0,Math.ceil(game.duration-game.time));$('timer').textContent=`${Math.floor(left/60).toString().padStart(2,'0')}:${(left%60).toString().padStart(2,'0')}`;$('helped').textContent=`${game.solved} Kunden geholfen`;$('wave-label').textContent=game.exitOpen?'Der Weg ist frei':phases[Math.max(0,game.phase)];const boss=game.boss;const objText=game.exitOpen?'Ab nach Waltrop! Geh zum grünen Ausgang oben im Hof.':game.progress>=1?(boss?'Fast Feierabend: Kläre noch Jörgs Notizen!':'Fast Feierabend: Geh zum Ausgang.'):'Schlossstraße 30 · Halte bis zum Feierabend durch.';if(objText!==lastObjective){lastObjective=objText;showObjective(objText,game.exitOpen?8:5);}$('boss-panel').hidden=!boss;if(boss){$('boss-fill').style.width=`${Math.max(0,(1-boss.hp/boss.maxHp)*100)}%`;const bn=$('boss-panel').querySelector('strong');if(bn)bn.textContent='„Nur ganz kurz, Dennis …“';const bs=$('boss-panel').querySelector('span');if(bs)bs.textContent=`Jörg · ${boss.points||0} / ${boss.target||3} Notizen`;}}
 function handleEvents(){for(const e of game.drain()){
  if(e.type==='solved'){floating.push({x:e.x,y:e.y-55,text:e.boss?'DAS IST GEKLÄRT!':'Danke!',color:'#a0f3bf',life:1.3});fx.push({type:'depart',x:e.x,y:e.y,sprite:e.sprite,t:0,duration:.85});for(let i=0;i<7;i++)fx.push({type:'spark',x:e.x,y:e.y-25,vx:(Math.random()-.5)*95,vy:-Math.random()*85,t:0,duration:.7});tone(e.boss?880:650,.065);}
  else if(e.type==='hit'){floating.push({x:e.x+(Math.random()-.5)*18,y:e.y-42,text:`-${e.amount}`,color:'#ffd89a',size:11,life:.55});tone(420,.025,.01);}
  else if(e.type==='upgrade')upgrade();
  else if(e.type==='end')end(e.won);
  else if(e.type==='phase'){if(e.phase>0)showToast(phases[e.phase],2);}
- else if(e.type==='boss')showToast('Nur noch fünf Fotos. Natürlich.',2.5);
- else if(e.type==='bossSolved')showToast('Das große Anliegen? Geklärt!',2.5);
+ else if(e.type==='boss')showToast('„Dennis, hast du noch ganz kurz?“ · Jörg betritt den Hof!',3);
+ else if(e.type==='bossSolved')showToast('„Alles klar. Ihr habt das im Griff. Schönen Feierabend!“',3);
+ else if(e.type==='bossNear'){floating.push({x:game.player.x,y:game.player.y-50,text:'Abstand zu Jörg!',color:'#ff9b78',life:.7});tone(150,.08);}
+ else if(e.type==='bossSlideHit'){floating.push({x:game.player.x,y:game.player.y-50,text:'Folie aktiv! -Geduld',color:'#ff9b78',life:.7});tone(150,.1);}
+ else if(e.type==='bossActive')tone(240,.08);
+ else if(e.type==='bossSlide')tone(470,.08);
+ else if(e.type==='bossNote'){floating.push({x:e.x,y:e.y-45,text:'Neue Notiz!',color:'#a0f3bf',life:1.3});tone(650,.1);}
+ else if(e.type==='bossPoint'){floating.push({x:e.x,y:e.y-45,text:`✓ Notiz ${e.points}/${e.target} geklärt!`,color:'#94e3b3',life:1.5});tone(760,.14);}
  else if(e.type==='exit')showToast('Der Weg nach Waltrop ist frei!',3.5);
  else if(e.type==='gate'||e.type==='swing'){fx.push({...e,t:0,duration:.65});tone(170,.16);}
  else if(e.type==='coffee'){floating.push({x:game.player.x,y:game.player.y-70,text:'+ Geduld',color:'#ffc46b',life:1.3});tone(540,.12);}
@@ -76,13 +82,35 @@ function draw(time,dt){if(!game||!loaded)return;const p=game.player,s=screen.sca
  // The open threshold remains visible before the final case is solved.
  if(game.exitOpen){const pulse=reduced?1:1+Math.sin(time*.004)*.08;ctx.save();ctx.translate(EXIT.x,EXIT.y);ctx.scale(pulse,pulse);ctx.strokeStyle='#a7f7bb';ctx.lineWidth=3;ctx.strokeRect(-62,-45,124,72);ctx.fillStyle='#a7f7bb25';ctx.fillRect(-62,-45,124,72);ctx.beginPath();ctx.moveTo(-10,-9);ctx.lineTo(0,-23);ctx.lineTo(10,-9);ctx.stroke();label('NACH WALTROP',0,-60,'#c0ffca',18);ctx.restore();}
  if(game.skills.shield){ctx.fillStyle='#8ce3bc10';ctx.strokeStyle='#8ce3bc66';ctx.lineWidth=2;ctx.beginPath();ctx.ellipse(p.x,p.y,105+game.skills.shield*15,65+game.skills.shield*8,0,0,Math.PI*2);ctx.fill();ctx.stroke();}
+ const boss=game.boss;
+ if(boss){
+  ctx.fillStyle=game.bossNear?'#ff9b782a':'#ffad4b10';ctx.strokeStyle=game.bossNear?'#ffc5ad':'#ffad4b';ctx.lineWidth=2;ctx.beginPath();ctx.arc(boss.x,boss.y,62,0,Math.PI*2);ctx.fill();ctx.stroke();
+ }
+ if(boss?.slide){
+  const f=boss.slide,active=f.age>=3.2,left=f.x-f.w/2,top=f.y-f.h/2;
+  ctx.fillStyle=active?'#e08c345e':'#ffad4b14';ctx.fillRect(left,top,f.w,f.h);
+  ctx.strokeStyle=active?'#ffc496':'#ffca79';ctx.lineWidth=active?5:3;
+  ctx.setLineDash(active?[]:[13,9]);ctx.strokeRect(left,top,f.w,f.h);ctx.setLineDash([]);
+  label(active?'EINE FOLIE NOCH …':'FOLIE KOMMT',f.x,top+32,active?'#ffc496':'#ffcf8d',15);
+  if(!active){
+   const percent=Math.min(1,f.age/3.2);ctx.fillStyle='#0c2338';ctx.fillRect(f.x-100,top+46,200,6);ctx.fillStyle='#ffd292';ctx.fillRect(f.x-100,top+46,200*percent,6);
+  }else{
+   ctx.fillStyle='#ffcca0';for(let i=0;i<3;i++)ctx.fillRect(left+55,top+56+i*18,f.w-110-i*36,3);
+  }
+ }
+ for(const n of game.bossNotes){
+  const bob=reduced?0:Math.sin(time*.005+n.id)*3;ctx.save();ctx.translate(n.x,n.y+bob);
+  ctx.fillStyle='#0a2d2b';ctx.strokeStyle='#a3f7be';ctx.lineWidth=3;ctx.fillRect(-18,-20,36,36);ctx.strokeRect(-18,-20,36,36);
+  ctx.fillStyle='#d1ffda';ctx.fillRect(-9,-13,18,23);ctx.fillStyle='#28684d';ctx.fillRect(-5,-8,10,2);ctx.fillRect(-5,-2,10,2);ctx.fillRect(-5,4,7,2);
+  label('NOTIZ',0,-28,'#b3ffd0',13);ctx.restore();
+ }
  for(const item of game.pickups){if(item.type==='coffee'){sprite(5,item.x,item.y,50);continue;}const bob=reduced?0:Math.sin(time*.004+item.id)*3;ctx.save();ctx.translate(item.x,item.y+bob);ctx.fillStyle='#9bedb6';ctx.fillRect(-5,-9,10,10);ctx.fillRect(-8,-6,16,4);ctx.fillStyle='#e0ffe9';ctx.fillRect(-3,-8,4,4);ctx.restore();}
  const entities=[...game.enemies.map(e=>({...e,kind:'customer'})),{...p,kind:'player'}].sort((a,b)=>a.y-b.y);
  for(const e of entities){const isPlayer=e.kind==='player',size=isPlayer?112:e.boss?138:98,bob=reduced?0:Math.sin(time*.012+e.x*.1)*(isPlayer?(p.moving?2:0):1.7);ctx.fillStyle='#020e1b70';ctx.beginPath();ctx.ellipse(e.x,e.y,23*(size/100),8,0,0,Math.PI*2);ctx.fill();
   if(isPlayer){ctx.strokeStyle='#ffbc5c';ctx.lineWidth=2;ctx.beginPath();ctx.ellipse(e.x,e.y+1,26,9,0,0,Math.PI*2);ctx.stroke();}
   sprite(isPlayer?0:e.sprite,e.x,e.y+bob,size,isPlayer?p.facing:e.x>p.x?-1:1,e.flash>0?.65:1);
   if(isPlayer){label('DENNIS',e.x,e.y-size-5,'#ffd28c',12);}
-  else{const w=e.boss?70:39;ctx.fillStyle='#091a2b';ctx.fillRect(e.x-w/2-1,e.y-size+1,w+2,6);ctx.fillStyle='#517083';ctx.fillRect(e.x-w/2,e.y-size+2,w,4);ctx.fillStyle='#99e5b5';ctx.fillRect(e.x-w/2,e.y-size+2,w*Math.max(0,1-e.hp/e.maxHp),4);if(e.boss)label('5 FOTOS. 0 MAẞE.',e.x,e.y-size-7,'#ffce7f',12);else if(e.hp===e.maxHp)label('?',e.x,e.y-size-4,'#f6d491',16);}
+  else{const w=e.boss?90:39;ctx.fillStyle='#091a2b';ctx.fillRect(e.x-w/2-1,e.y-size+1,w+2,6);ctx.fillStyle='#517083';ctx.fillRect(e.x-w/2,e.y-size+2,w,4);ctx.fillStyle='#99e5b5';ctx.fillRect(e.x-w/2,e.y-size+2,w*Math.max(0,1-e.hp/e.maxHp),4);if(e.boss)label(`JÖRG · ${e.points||0}/${e.target||3}`,e.x,e.y-size-7,'#ffce7f',13);else if(e.hp===e.maxHp)label('?',e.x,e.y-size-4,'#f6d491',16);}
  }
  for(const shot of game.shots){ctx.save();ctx.translate(shot.x,shot.y-28);ctx.rotate(shot.kind==='paper'?time*.006:Math.atan2(shot.vy,shot.vx));if(shot.kind==='paper'){ctx.fillStyle='#fff4d9';ctx.fillRect(-9,-12,18,24);ctx.fillStyle='#537a91';ctx.fillRect(-5,-6,10,2);ctx.fillRect(-5,-1,10,2);ctx.fillRect(-5,4,7,2);}else{ctx.strokeStyle='#ffbd5e';ctx.lineWidth=3;ctx.strokeRect(-7,-3,14,6);ctx.fillStyle='#ffdc93';ctx.fillRect(-12,-1,6,2);}ctx.restore();}
  const run=game.state==='playing';
@@ -95,6 +123,8 @@ function draw(time,dt){if(!game||!loaded)return;const p=game.player,s=screen.sca
  }
  fx=fx.filter(f=>f.t<f.duration);for(const f of floating){if(run){f.life-=dt;f.y-=dt*23;}ctx.save();ctx.globalAlpha=Math.min(1,f.life*2);label(f.text,f.x,f.y,f.color,17);ctx.restore();}floating=floating.filter(f=>f.life>0);
  ctx.restore();
+ const goal=game.bossNotes[0]||(boss&&!game.bossSolved?boss:null);
+ if(goal){const gx=(goal.x-camera.x)*s+screen.w/2,gy=(goal.y-camera.y)*s+screen.h/2,left=35,right=screen.w-35,top=Math.min(150,screen.h/2),bottom=Math.max(top,screen.h-145);if(gx<left||gx>right||gy<top||gy>bottom){const x=Math.max(left,Math.min(right,gx)),y=Math.max(top,Math.min(bottom,gy)),angle=Math.atan2(gy-y,gx-x);ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.fillStyle=goal===boss?'#ffad4b':'#94e3b3';ctx.beginPath();ctx.moveTo(11,0);ctx.lineTo(-7,-7);ctx.lineTo(-7,7);ctx.closePath();ctx.fill();ctx.restore();label(goal===boss?'JÖRG':'NOTIZ',x,y+24,goal===boss?'#ffad4b':'#94e3b3',12);}}
  if(!reduced){ctx.strokeStyle='#96bfcd19';ctx.lineWidth=1;for(let i=0;i<45;i++){const x=(i*97+time*.025)%screen.w,y=(i*151+time*.18)%screen.h;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x-4,y+13);ctx.stroke();}}
  if(p.hp<30){ctx.strokeStyle=`rgba(255,126,90,${.18+Math.sin(time*.005)*.06})`;ctx.lineWidth=14;ctx.strokeRect(7,7,screen.w-14,screen.h-14);}
 }

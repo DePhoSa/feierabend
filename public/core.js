@@ -33,6 +33,8 @@ export const QUOTES=[
  'Das ist nur geraten. Ich kann auch sagen: Morgen regnet es. Bringt Ihnen genauso viel.',
  'Hörmann ist ein Containerschiff und kein Rennboot.'
 ];
+export const PRESENTATION_ROUTE=[{x:980,y:540},{x:940,y:740},{x:730,y:760},{x:650,y:550},{x:800,y:425}];
+export function insideSlide(point,slide,margin=0){return Math.abs(point.x-slide.x)<slide.w/2+margin&&Math.abs(point.y-slide.y)<slide.h/2+margin;}
 export function seeded(seed=42){return()=>{seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
 const dist=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
@@ -44,6 +46,7 @@ export class Shift {
   this.skills={tacker:1,paper:0,shield:0,gate:0,swing:0,experience:0,coffee:0};
   this.enemies=[];this.pickups=[];this.shots=[];this.events=[];this.nextId=1;this.spawnClock=1;this.fireClock=.3;this.gateClock=3;this.swingClock=4;this.auraClock=1;this.paperClock=1.5;this.coffeeClock=15;this.quoteClock=8;
   this.bossSpawned=false;this.bossSolved=false;this.exitOpen=false;this.phase=-1;this.choices=[];this.pausedFrom=null;
+  this.bossNotes=[];this.bossNear=false;
  }
  emit(type,data={}){this.events.push({type,...data});}
  drain(){const events=this.events;this.events=[];return events;}
@@ -53,18 +56,22 @@ export class Shift {
  spawn(boss=false){
   let x,y;for(let i=0;i<20;i++){const edge=Math.floor(this.random()*4);x=edge===0?WORLD.left:edge===1?WORLD.right:WORLD.left+this.random()*(WORLD.right-WORLD.left);y=edge===2?WORLD.top:edge===3?WORLD.bottom:WORLD.top+this.random()*(WORLD.bottom-WORLD.top);if(Math.hypot(x-this.player.x,y-this.player.y)>320)break;}
   const type=TYPES[Math.min(3,Math.floor(this.random()*(1+this.progress*4)))];
-  const hp=boss?350+this.level*15:type.hp*(1+this.progress*.7);
-  const e={...type,id:this.nextId++,x,y,hp,maxHp:hp,flash:0,boss,r:boss?30:18,hitPause:0};
-  if(boss){e.name='Nur noch fünf Fotos';e.speed=39;e.sprite=4;this.bossSpawned=true;this.emit('boss');}
+  const hp=boss?360+this.level*20:type.hp*(1+this.progress*.7);
+  const e={...type,id:this.nextId++,x:boss?800:x,y:boss?425:y,hp,maxHp:hp,flash:0,boss,r:boss?30:18,hitPause:0};
+  if(boss){
+   e.name='Jörg';e.title='„Nur ganz kurz, Dennis …“';e.speed=130;e.sprite=4;e.facing=1;e.moving=false;
+   e.routeIndex=0;e.rest=2.4;e.nearTime=0;e.slide=null;e.slideCount=0;e.points=0;e.target=3;
+   this.bossSpawned=true;this.emit('boss',{name:e.name,title:e.title});
+  }
   this.enemies.push(e);return e;
  }
  help(e,amount,push=0){
   if(e.hp<=0)return;e.hp-=amount;e.flash=.16;
-  if(push){let d=dist(e,this.player)||1;e.x=clamp(e.x+(e.x-this.player.x)/d*push,WORLD.left,WORLD.right);e.y=clamp(e.y+(e.y-this.player.y)/d*push,WORLD.top,WORLD.bottom);e.hitPause=.4;}
+  if(push&&!e.boss){let d=dist(e,this.player)||1;e.x=clamp(e.x+(e.x-this.player.x)/d*push,WORLD.left,WORLD.right);e.y=clamp(e.y+(e.y-this.player.y)/d*push,WORLD.top,WORLD.bottom);e.hitPause=.4;}
   this.emit('hit',{x:e.x,y:e.y,amount:Math.round(amount),boss:e.boss});
   if(e.hp<=0){
-   this.solved++;if(e.boss){this.bossSolved=true;this.emit('bossSolved');}
-   this.pickups.push({x:e.x,y:e.y,type:'xp',amount:e.boss?18:1,id:this.nextId++});
+   this.solved++;if(e.boss){this.bossSolved=true;this.bossNotes=[];this.bossNear=false;this.emit('bossSolved');}
+   this.pickups.push({x:e.x,y:e.y,type:'xp',amount:e.boss?25:1,id:this.nextId++});
    this.emit('solved',{x:e.x,y:e.y,sprite:e.sprite,boss:e.boss});
   }
  }
@@ -94,15 +101,68 @@ export class Shift {
   const length=Math.hypot(input.x,input.y);p.moving=length>.05;
   if(length){const mul=Math.min(1,length)/length;p.x=clamp(p.x+input.x*mul*p.speed*dt,WORLD.left+24,WORLD.right-24);p.y=clamp(p.y+input.y*mul*p.speed*dt,WORLD.top+24,WORLD.bottom-24);if(Math.abs(input.x)>.05)p.facing=input.x<0?-1:1;}
   this.spawnClock-=dt;
-  if(this.spawnClock<=0&&this.progress<1){if(this.enemies.length<65)this.spawn();this.spawnClock=1.65-this.progress*1.03;}
+  const enemyCap=this.bossSpawned?28:65;
+  if(this.spawnClock<=0&&this.progress<1){if(this.enemies.length<enemyCap)this.spawn();this.spawnClock=1.65-this.progress*1.03;}
   if(this.progress>=.8&&!this.bossSpawned)this.spawn(true);
   this.quoteClock-=dt;if(this.quoteClock<0){this.quoteClock=16;this.emit('quote',{index:Math.floor(this.random()*QUOTES.length)});}
   this.coffeeClock-=dt;if(this.coffeeClock<=0){this.coffeeClock=22;this.pickups.push({id:this.nextId++,type:'coffee',x:WORLD.left+100+this.random()*(WORLD.right-WORLD.left-200),y:WORLD.top+75+this.random()*(WORLD.bottom-WORLD.top-150),amount:30});}
   let touching=0;
   for(const e of this.enemies){
-   e.flash=Math.max(0,e.flash-dt);e.hitPause=Math.max(0,e.hitPause-dt);let d=dist(e,p)||1;
-   if(d>e.r+16&&!e.hitPause){e.x+=(p.x-e.x)/d*e.speed*dt;e.y+=(p.y-e.y)/d*e.speed*dt;}
-   if(d<e.r+24)touching+=e.boss?2:1;
+   e.flash=Math.max(0,e.flash-dt);e.hitPause=Math.max(0,e.hitPause-dt);
+   if(e.boss){
+    const dToDennis=dist(e,p);
+    if(dToDennis<62){
+     this.bossNear=true;e.nearTime=(e.nearTime||0)+dt;
+     const exposed=Math.max(0,e.nearTime-.5);
+     if(exposed>0){p.hp=Math.max(0,p.hp-dt*10*(1-this.skills.shield*.13));if(!e.nearHit){e.nearHit=true;this.emit('bossNear');}}
+    }else{this.bossNear=false;e.nearTime=0;e.nearHit=false;}
+    if(e.slide){
+     const s=e.slide,prevAge=s.age;s.age+=dt;
+     if(prevAge<3.2&&s.age>=3.2)this.emit('bossActive');
+     const end=3.2+1.2;
+     const activeTime=Math.max(0,Math.min(s.age,end)-Math.max(prevAge,3.2));
+     if(activeTime>0&&insideSlide(p,s,14)){
+      p.hp=Math.max(0,p.hp-dt*12*(1-this.skills.shield*.13));
+      if(!s.hit){s.hit=true;this.emit('bossSlideHit');}
+     }
+     if(s.age>=end){
+      e.slide=null;
+      const hasNote=this.bossNotes.some(n=>dist(n,e)<50);
+      if(!hasNote&&e.points<e.target){
+       const note={id:this.nextId++,x:e.x,y:e.y};
+       this.bossNotes.push(note);
+       this.emit('bossNote',{x:note.x,y:note.y});
+      }
+      e.routeIndex=(e.routeIndex+1)%PRESENTATION_ROUTE.length;
+      e.rest=2.0;
+     }
+    }else{
+     const target=PRESENTATION_ROUTE[e.routeIndex];
+     const dx=target.x-e.x,dy=target.y-e.y,d=Math.hypot(dx,dy),step=e.speed*dt;
+     e.moving=d>.01;if(Math.abs(dx)>.01)e.facing=dx<0?-1:1;
+     if(d>step){e.x+=dx/d*step;e.y+=dy/d*step;}
+     else{
+      e.x=target.x;e.y=target.y;e.moving=false;
+      e.rest=Math.max(0,e.rest-dt);
+      if(e.rest<=0){
+       const w=320,h=140;
+       const positions=[{x:p.x,y:p.y},{x:e.x-w/2-75,y:e.y},{x:e.x+w/2+75,y:e.y},{x:e.x,y:e.y-h/2-75},{x:e.x,y:e.y+h/2+75}]
+        .map(n=>({x:clamp(n.x,WORLD.left+w/2+24,WORLD.right-w/2-24),y:clamp(n.y,WORLD.top+h/2+24,WORLD.bottom-h/2-24),w,h}))
+        .filter(s=>!insideSlide(e,s,45)&&!this.bossNotes.some(n=>insideSlide(n,s,35)));
+       positions.sort((a,b)=>dist(a,p)-dist(b,p));
+       if(positions.length){
+        e.slide={...positions[0],age:0,hit:false};
+        e.slideCount++;
+        this.emit('bossSlide',{slide:e.slide,count:e.slideCount});
+       }else e.rest=.5;
+      }
+     }
+    }
+   }else{
+    let d=dist(e,p)||1;
+    if(d>e.r+16&&!e.hitPause){e.x+=(p.x-e.x)/d*e.speed*dt;e.y+=(p.y-e.y)/d*e.speed*dt;}
+    if(d<e.r+24)touching+=1;
+   }
   }
   // Separation keeps each customer's silhouette readable in a crowd.
   for(let i=0;i<this.enemies.length;i++)for(let j=i+1;j<this.enemies.length;j++){
@@ -110,7 +170,20 @@ export class Shift {
    if(d>0&&d<r){const s=(r-d)*.25;const dx=(a.x-b.x)/d*s,dy=(a.y-b.y)/d*s;a.x+=dx;a.y+=dy;b.x-=dx;b.y-=dy;}
   }
   if(touching)p.hp-=Math.min(15,touching*5.5)*dt*(1-this.skills.shield*.13);
-  else p.hp=Math.min(p.maxHp,p.hp+dt*1.5);
+  else if(!this.bossNear)p.hp=Math.min(p.maxHp,p.hp+dt*1.5);
+  this.bossNotes=this.bossNotes.filter(n=>{
+   if(dist(n,p)<36){
+    const boss=this.boss;
+    if(boss){
+     boss.points++;
+     p.hp=Math.min(p.maxHp,p.hp+12);
+     this.emit('bossPoint',{points:boss.points,target:boss.target,x:n.x,y:n.y});
+     this.help(boss,boss.maxHp/boss.target+1);
+    }
+    return false;
+   }
+   return true;
+  });
   let nearest=null,nearestDist=Infinity;for(const e of this.enemies){const d=dist(e,p);if(e.hp>0&&d<nearestDist){nearest=e;nearestDist=d;}}
   this.fireClock-=dt;
   if(this.fireClock<=0&&nearest&&nearestDist<620){

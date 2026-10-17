@@ -14,6 +14,7 @@ Stand: 16. Oktober 2026. Der Nutzer hat den Fahrplan als Arbeitsrahmen bestätig
 - Version 0.2.0-preview.6 umgesetzt: Ziffern-Lesbarkeit korrigiert (Schichtuhr, Geduld und Dialogzahlen nutzen gestochen scharfen Monospace-Schriftsatz statt klobiger Pixelglyphen). Permanente Spruchbox im Spiel entfernt für maximalen Freiraum unten; Dennis' Sprüche erscheinen passend als Sprechblase im Level-Up-Dialog und bei Ausrüstungswahl (I-002). Hilfsmittel skalieren spürbar (Tacker ab Stufe 3/5 mit 2 bzw. 3 Klammern; Seite-2-Bumerang ab Stufe 2 mit 2 rotierenden Preislisten; Treffer erzeugen feines Beratungs-Feedback). 20/20 Tests bestanden. Meilenstein 0.2 bleibt offen für die Nutzerabnahme.
 - Version 0.2.0-preview.7 umgesetzt: Typografie-Generalüberholung zur Beseitigung unleserlicher Ligaturen (Pixelify Sans durch die saubere Indie-Arcade-Schrift 'Chakra Petch' ersetzt; Ziffern gestochen scharf; "Konfigurator" und "Bumerang" fehlerfrei lesbar). Mitten-Spruch-Spam während des Spiels vollständig entfernt (Dennis' Zitate erscheinen exklusiv im Aufstiegs-/Upgrade-Dialog). Versionsanzeige im Hauptmenü (`.prototype`) synchronisiert und als verbindliche Entwicklungsregel in `AGENTS.md` verankert. 20/20 Tests bestanden.
 - Version 0.2.0-preview.8 umgesetzt: Schichtziel-Banner („Schlossstraße 30 …“) nach 5 Sekunden sanft ausgeblendet für maximale freie Sicht; erscheint nur bei Phasenwechseln kurz wieder. Meilenstein 0.2 vom Nutzer erfolgreich abgenommen („ansonsten war der test erfoglreich. wir können also weiter machen“).
+- Version 0.3.0-preview.1 umgesetzt: Bossbegegnung Jörg („Nur ganz kurz, Dennis …“) vollständig in die reguläre Herne-Runde integriert. Jörg erscheint ab 80 % Schichtfortschritt, läuft eine Hof-Route ab, hält zum Erzählen an, kündigt PowerPoint-Folien an und hinterlässt Notizen. Dennis muss Distanz halten (orangefarbene Geduldszone), Folien ausweichen und drei Notizen klären. Automatische Waffen unterstützen Dennis gegen Kunden und Jörg. Zielanzeiger weist den Weg zu Notizen und Jörg, wenn diese außerhalb des Bildschirms liegen. 21/21 Tests bestanden.
 
 ## Bestätigte Leitplanken
 
@@ -102,16 +103,16 @@ Zusätzlich notieren wir Rundendauer, erreichte Stufe, Verständnisprobleme und 
 
 ## Nächster Arbeitsschritt
 
-**Beginn Meilenstein 0.3: Herne als Referenzkapitel („Vertical Slice“ mit Bossbegegnung).**
-Meilenstein 0.2 wurde vom Nutzer erfolgreich abgenommen („ansonsten war der test erfoglreich. wir können also weiter machen“).
-In Version 0.2.0-preview.8 wurde der letzte optische Wunsch umgesetzt: Das Banner („Schlossstraße 30 …“) blendet sich nach 5 Sekunden sanft aus, sodass der Bildschirm maximal frei bleibt.
+**Test der Version 0.3.0-preview.1 durch den Nutzer (Herne Vertical Slice mit Jörg-Boss).**
+Die Jörg-Bossmechanik ist nun direkt in die reguläre Herne-Schicht integriert:
+1. **Erscheinen:** Bei 80 % Schichtfortschritt kündigt sich Jörg an („Nur ganz kurz, Dennis …“) mit eigenem Boss-Panel oben.
+2. **Distanzregel:** Ein sichtbarer 62-px-Radius um Jörg zeigt den Nahbereich; zu langes Verweilen darin kostet Geduld (nach 0,5 s Schonfrist).
+3. **PowerPoint-Folien:** Jörg stoppt, kündigt eine Folie als rote Warnfläche an, die kurz aktiv wird und gemieden werden muss.
+4. **Notizen sammeln:** Jede Folie hinterlässt eine grüne Notiz zum Aufsammeln, die 12 Geduld heilt und Jörgs Thema klärt (3 Notizen nötig).
+5. **Off-Screen-Marker & Waffen:** Dennis' Waffen (Tacker, Seite 2) teilen Beratungs-Schaden an Kunden und Jörg aus; Pfeile am Bildschirmrand weisen den Weg zu Jörg und Notizen.
+6. **Feierabend:** Nach 3 geklärten Notizen und voller Schichtzeit öffnet sich der grüne Feierabend-Ausgang nach Waltrop.
 
-Für Meilenstein 0.3:
-1. **Boss-Muster final festlegen:** Übernahme der bewährten Mechanik aus der Jörg-Probe (Gehen, Erzählen, Distanz halten, Notizen sammeln / Punkte klären).
-2. **Integration in die Herne-Runde:** Boss erscheint nach Ablauf der regulären Schichtzeit bzw. in der finalen Phase als Abschluss-Herausforderung, bevor der grüne Ausgang nach Waltrop frei wird.
-3. **Boss-Visualisierung & Sprüche:** Passende Vorankündigung und Dialoge für Dennis und den Boss.
-
-Nach kurzer Abstimmung der nächsten Details starten wir mit der technischen Integration des Bossmusters in die Hauptrunde.
+Nach Rückmeldung des Nutzers zu Spielgefühl, Tempo und Lesbarkeit: Feinabstimmung und Vorbereitung der Kapitelüberleitung zu Meilenstein 0.4.
 
 ## Fachlicher Hintergrund
 
