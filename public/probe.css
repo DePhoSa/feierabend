@@ -5,7 +5,7 @@
 .probe-page .patience-block{width:140px;padding:0;border:0;background:none}
 .probe-page .meter{height:5px}.probe-page .meter-label{font-size:12px;margin-bottom:6px}
 .probe-page .shift-clock{min-width:0;padding:0;border:0;background:none;display:flex;align-items:center;gap:16px}
-.probe-page .shift-clock strong{font-size:29px;line-height:1}.probe-page .shift-clock span{font-size:12px;color:var(--mint);white-space:nowrap}
+.probe-page .shift-clock strong{font-size:28px;line-height:1;font-family:Consolas,'SF Mono','Segoe UI Mono','Roboto Mono','Courier New',monospace;letter-spacing:1px}.probe-page .shift-clock span{font-size:12px;color:var(--mint);white-space:nowrap}.probe-page .meter-label span,.probe-page .end-stats strong{font-family:Consolas,'SF Mono','Segoe UI Mono',monospace}
 .probe-page .hud-button{min-width:44px;min-height:44px;padding:10px;background:none;border:0}
 .probe-signal{position:absolute;top:calc(76px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);margin:0;padding:7px 12px;background:var(--night);font:14px/1.35 Segoe UI,Arial,sans-serif;color:var(--orange);text-align:center;max-width:calc(100% - 24px);width:max-content;pointer-events:none}
 .probe-signal.active{color:#ffc5ad}.probe-signal.calm{color:var(--mint)}

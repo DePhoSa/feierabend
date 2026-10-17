@@ -10,7 +10,8 @@ Stand: 16. Oktober 2026. Der Nutzer hat den Fahrplan als Arbeitsrahmen bestätig
 - Prüfstand: sieben Simulationstests, erste Desktop-/Mobil-Browserprüfungen. Ein vollständiger manueller Sieg und echte Handy-Hardwaretests sind noch offen; Einzelheiten in TESTING.md.
 - Textkorrektur dieses Arbeitsabschnitts: „5 FOTOS. 0 MASSE.“ → „5 FOTOS. 0 MAẞE.“. Alle 16 Dennis-Sprüche auf relevante ß-/ss-Wörter geprüft; ß, ẞ und Umlaute im Zeichenvorrat der Pixelschrift nachgewiesen.
 - Erster 0.2-Arbeitsabschnitt umgesetzt: separate 45-Sekunden-Spielprobe „Nur ganz kurz, Dennis …“ mit angekündigten PowerPoint-Flächen und drei Notizen. Jörg nutzt ausdrücklich eine vorhandene Platzhalterfigur. Herne-Hauptspiel bleibt separat erreichbar. Technische Prüfung und erster vollständiger Tastaturdurchlauf bestanden; Erstes Nutzerfeedback positiv zur Idee, kritisch zu Hektik, langer Folienaktivität, Geduldsverlust und voller Handyansicht. Die ruhigere Korrektur verbessert laut Nutzer die freie Sicht, ist dadurch aber zu einfach. Sein neuer Versuch I-012 ist umgesetzt: Jörg geht, stoppt zum Erzählen, Folien stehen separat, Notizen entstehen anschließend am Erzählplatz, Pausen werden in drei Stufen kürzer. Vom Nutzer als besser bewertet und vorläufig beibehalten. Seine zusätzliche Distanzregel ist ergänzt: Nähe kostet nach kurzer Reaktionszeit Geduld, sichtbar durch einen Kreis. Technisch geprüft, Live-Test der Ergänzung beim Nutzer. Die Bossprobe ist damit vorerst geparkt.
-- Version 0.2.0-preview.5 umgesetzt: Kompaktes HUD aus der Probe auf die normale Herne-Runde übertragen. Topbar im Spiel ausgeblendet (volle 100svh Spielfläche auf PC und Handy), schlanke Statusleiste am oberen Rand (Geduld, XP, Uhr, Pause), dezentere Banner für Schichtziel und Boss, Tonwahl, Steuerungshinweise, Schicht-Neustart und Menürückkehr ins Pausenmenü verlagert. Repository auf `DePhoSa/feierabend` umgestellt. Technisch geprüft (19/19 Tests bestanden). Meilenstein 0.2 bleibt offen für die Nutzerabnahme.
+- Version 0.2.0-preview.5 umgesetzt: Kompaktes HUD aus der Probe auf die normale Herne-Runde übertragen. Topbar im Spiel ausgeblendet (volle 100svh Spielfläche auf PC und Handy), schlanke Statusleiste am oberen Rand (Geduld, XP, Uhr, Pause), dezentere Banner für Schichtziel und Boss, Tonwahl, Steuerungshinweise, Schicht-Neustart und Menürückkehr ins Pausenmenü verlagert. Repository auf `DePhoSa/feierabend` umgestellt.
+- Version 0.2.0-preview.6 umgesetzt: Ziffern-Lesbarkeit korrigiert (Schichtuhr, Geduld und Dialogzahlen nutzen gestochen scharfen Monospace-Schriftsatz statt klobiger Pixelglyphen). Permanente Spruchbox im Spiel entfernt für maximalen Freiraum unten; Dennis' Sprüche erscheinen passend als Sprechblase im Level-Up-Dialog und bei Ausrüstungswahl (I-002). Hilfsmittel skalieren spürbar (Tacker ab Stufe 3/5 mit 2 bzw. 3 Klammern; Seite-2-Bumerang ab Stufe 2 mit 2 rotierenden Preislisten; Treffer erzeugen feines Beratungs-Feedback). 20/20 Tests bestanden. Meilenstein 0.2 bleibt offen für die Nutzerabnahme.
 
 ## Bestätigte Leitplanken
 
@@ -99,14 +100,14 @@ Zusätzlich notieren wir Rundendauer, erreichte Stufe, Verständnisprobleme und 
 
 ## Nächster Arbeitsschritt
 
-**Nutzertest des kompakten Herne-HUDs (0.2.0-preview.5) und Vorbereitung der differenzierten Aufwertungen.** 
-Der Nutzer testet am PC und Smartphone:
-1. Ist die Spielfläche frei und Dennis' Bewegung uneingeschränkt übersichtlich?
-2. Bleiben Geduld, Erfahrungsfortschritt und Restzeit oben im Blick, ohne zu stören?
-3. Lässt sich die Pause (<kbd>P</kbd>, Escape oder Tippen auf „Pause“) flüssig öffnen und bedienen (Ton an/aus, Schicht neu starten, zurück zum Menü)?
-4. Funktionieren Schichtende, Aufstiege und Sieg/Kaffeepause ohne Reibung?
+**Nutzertest zu 0.2.0-preview.6 (Zahlen-Lesbarkeit, freie Spielfläche & skalierende Hilfsmittel).**
+Der Nutzer prüft im Live-Spiel:
+1. **Zahlenlesbarkeit:** Sind Schichtuhr (z. B. `02:22`), Geduld in % und Kunden-Zähler jetzt gestochen scharf und sofort unterscheidbar?
+2. **Freie Spielfläche unten:** Wirkt der untere Bereich ohne die permanente Spruchbox aufgeräumt und Dennis' Laufweg frei?
+3. **Sprüche bei Upgrades:** Fühlen sich Dennis' Kommentare im Level-Up-Dialog und beim Wählen passend an?
+4. **Waffen-Skalierung:** Fühlt sich der Mehrfach-Tacker (ab Stufe 3/5) und Mehrfach-Bumerang (ab Stufe 2) im Gedränge kraftvoller an?
 
-Nach der Bestätigung: Weiterer 0.2-Schwerpunkt – differenzierte Hilfsmittel und spürbareres Treffer-/Ausrüstungsfeedback (IDEEN.md I-002, I-007). Echte iPhone-Hardwaretests und Web-App-Verpackung bleiben gesondert.
+Nach der Bestätigung: Abschluss von Meilenstein 0.2 und Übergang zu Meilenstein 0.3 (Herne als Vertical Slice / Referenzkapitel mit vollständiger Bossbegegnung).
 
 ## Fachlicher Hintergrund
 

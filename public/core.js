@@ -61,6 +61,7 @@ export class Shift {
  help(e,amount,push=0){
   if(e.hp<=0)return;e.hp-=amount;e.flash=.16;
   if(push){let d=dist(e,this.player)||1;e.x=clamp(e.x+(e.x-this.player.x)/d*push,WORLD.left,WORLD.right);e.y=clamp(e.y+(e.y-this.player.y)/d*push,WORLD.top,WORLD.bottom);e.hitPause=.4;}
+  this.emit('hit',{x:e.x,y:e.y,amount:Math.round(amount),boss:e.boss});
   if(e.hp<=0){
    this.solved++;if(e.boss){this.bossSolved=true;this.emit('bossSolved');}
    this.pickups.push({x:e.x,y:e.y,type:'xp',amount:e.boss?18:1,id:this.nextId++});
@@ -113,13 +114,19 @@ export class Shift {
   let nearest=null,nearestDist=Infinity;for(const e of this.enemies){const d=dist(e,p);if(e.hp>0&&d<nearestDist){nearest=e;nearestDist=d;}}
   this.fireClock-=dt;
   if(this.fireClock<=0&&nearest&&nearestDist<620){
-   this.fireClock=Math.max(.25,.74-this.skills.tacker*.07);const a=Math.atan2(nearest.y-p.y,nearest.x-p.x);
-   this.shots.push({x:p.x,y:p.y-10,vx:Math.cos(a)*540,vy:Math.sin(a)*540,life:1.4,damage:15*(1+.35*(this.skills.tacker-1)),kind:'tacker',hits:new Set()});this.emit('fire');
+   this.fireClock=Math.max(.22,.74-this.skills.tacker*.07);const a=Math.atan2(nearest.y-p.y,nearest.x-p.x);
+   const count=this.skills.tacker>=5?3:this.skills.tacker>=3?2:1;
+   const angles=count===3?[a-.16,a,a+.16]:count===2?[a-.11,a+.11]:[a];
+   for(const ang of angles){this.shots.push({x:p.x,y:p.y-10,vx:Math.cos(ang)*540,vy:Math.sin(ang)*540,life:1.4,damage:15*(1+.35*(this.skills.tacker-1)),kind:'tacker',hits:new Set()});}
+   this.emit('fire');
   }
   this.paperClock-=dt;
   if(this.skills.paper&&this.paperClock<=0&&nearest){
-   this.paperClock=3.8-this.skills.paper*.35;const a=Math.atan2(nearest.y-p.y,nearest.x-p.x);
-   this.shots.push({x:p.x,y:p.y-10,vx:Math.cos(a)*240,vy:Math.sin(a)*240,life:2.8,age:0,damage:18+this.skills.paper*8,kind:'paper',hits:new Set()});this.emit('paper');
+   this.paperClock=Math.max(2.2,3.8-this.skills.paper*.35);const a=Math.atan2(nearest.y-p.y,nearest.x-p.x);
+   const count=this.skills.paper>=4?3:this.skills.paper>=2?2:1;
+   const angles=count===3?[a,a+2.09,a-2.09]:count===2?[a,a+Math.PI]:[a];
+   for(const ang of angles){this.shots.push({x:p.x,y:p.y-10,vx:Math.cos(ang)*240,vy:Math.sin(ang)*240,life:2.8,age:0,damage:18+this.skills.paper*8,kind:'paper',hits:new Set()});}
+   this.emit('paper');
   }
   this.auraClock-=dt;
   if(this.skills.shield&&this.auraClock<=0){this.auraClock=.75;for(const e of this.enemies)if(dist(e,p)<105+this.skills.shield*15)this.help(e,3+this.skills.shield*3);}
