@@ -12,6 +12,7 @@ Stand: 16. Oktober 2026. Der Nutzer hat den Fahrplan als Arbeitsrahmen bestätig
 - Erster 0.2-Arbeitsabschnitt umgesetzt: separate 45-Sekunden-Spielprobe „Nur ganz kurz, Dennis …“ mit angekündigten PowerPoint-Flächen und drei Notizen. Jörg nutzt ausdrücklich eine vorhandene Platzhalterfigur. Herne-Hauptspiel bleibt separat erreichbar. Technische Prüfung und erster vollständiger Tastaturdurchlauf bestanden; Erstes Nutzerfeedback positiv zur Idee, kritisch zu Hektik, langer Folienaktivität, Geduldsverlust und voller Handyansicht. Die ruhigere Korrektur verbessert laut Nutzer die freie Sicht, ist dadurch aber zu einfach. Sein neuer Versuch I-012 ist umgesetzt: Jörg geht, stoppt zum Erzählen, Folien stehen separat, Notizen entstehen anschließend am Erzählplatz, Pausen werden in drei Stufen kürzer. Vom Nutzer als besser bewertet und vorläufig beibehalten. Seine zusätzliche Distanzregel ist ergänzt: Nähe kostet nach kurzer Reaktionszeit Geduld, sichtbar durch einen Kreis. Technisch geprüft, Live-Test der Ergänzung beim Nutzer. Die Bossprobe ist damit vorerst geparkt.
 - Version 0.2.0-preview.5 umgesetzt: Kompaktes HUD aus der Probe auf die normale Herne-Runde übertragen. Topbar im Spiel ausgeblendet (volle 100svh Spielfläche auf PC und Handy), schlanke Statusleiste am oberen Rand (Geduld, XP, Uhr, Pause), dezentere Banner für Schichtziel und Boss, Tonwahl, Steuerungshinweise, Schicht-Neustart und Menürückkehr ins Pausenmenü verlagert. Repository auf `DePhoSa/feierabend` umgestellt.
 - Version 0.2.0-preview.6 umgesetzt: Ziffern-Lesbarkeit korrigiert (Schichtuhr, Geduld und Dialogzahlen nutzen gestochen scharfen Monospace-Schriftsatz statt klobiger Pixelglyphen). Permanente Spruchbox im Spiel entfernt für maximalen Freiraum unten; Dennis' Sprüche erscheinen passend als Sprechblase im Level-Up-Dialog und bei Ausrüstungswahl (I-002). Hilfsmittel skalieren spürbar (Tacker ab Stufe 3/5 mit 2 bzw. 3 Klammern; Seite-2-Bumerang ab Stufe 2 mit 2 rotierenden Preislisten; Treffer erzeugen feines Beratungs-Feedback). 20/20 Tests bestanden. Meilenstein 0.2 bleibt offen für die Nutzerabnahme.
+- Version 0.2.0-preview.7 umgesetzt: Typografie-Generalüberholung zur Beseitigung unleserlicher Ligaturen (Pixelify Sans durch die saubere Indie-Arcade-Schrift 'Chakra Petch' ersetzt; Ziffern gestochen scharf; "Konfigurator" und "Bumerang" fehlerfrei lesbar). Mitten-Spruch-Spam während des Spiels vollständig entfernt (Dennis' Zitate erscheinen exklusiv im Aufstiegs-/Upgrade-Dialog). Versionsanzeige im Hauptmenü (`.prototype`) synchronisiert und als verbindliche Entwicklungsregel in `AGENTS.md` verankert. 20/20 Tests bestanden.
 
 ## Bestätigte Leitplanken
 
@@ -100,12 +101,12 @@ Zusätzlich notieren wir Rundendauer, erreichte Stufe, Verständnisprobleme und 
 
 ## Nächster Arbeitsschritt
 
-**Nutzertest zu 0.2.0-preview.6 (Zahlen-Lesbarkeit, freie Spielfläche & skalierende Hilfsmittel).**
+**Nutzertest zu 0.2.0-preview.7 (Neue Schriftart 'Arcade / Chakra Petch', lesbare Texte & freier Bildschirm).**
 Der Nutzer prüft im Live-Spiel:
-1. **Zahlenlesbarkeit:** Sind Schichtuhr (z. B. `02:22`), Geduld in % und Kunden-Zähler jetzt gestochen scharf und sofort unterscheidbar?
-2. **Freie Spielfläche unten:** Wirkt der untere Bereich ohne die permanente Spruchbox aufgeräumt und Dennis' Laufweg frei?
-3. **Sprüche bei Upgrades:** Fühlen sich Dennis' Kommentare im Level-Up-Dialog und beim Wählen passend an?
-4. **Waffen-Skalierung:** Fühlt sich der Mehrfach-Tacker (ab Stufe 3/5) und Mehrfach-Bumerang (ab Stufe 2) im Gedränge kraftvoller an?
+1. **Lesbarkeit der neuen Schrift:** Sind alle deutschen Wörter (z. B. "Konfigurator", "Bumerang") und Zahlen (Schichtuhr, Geduld in %) einwandfrei lesbar, ohne verwaschene Ligaturen oder zu fette Glyphen?
+2. **Freie Spielfläche ohne Mitten-Spam:** Bleibt das aktive Spielgeschehen frei von plötzlichen Spruch-Einblendungen in der Bildschirmmitte?
+3. **Dennis' Zitate bei Level-Up:** Erscheinen die Zitate übersichtlich und stimmig direkt im Aufstiegs-/Upgrade-Dialog neben Dennis' Porträt?
+4. **Versionsanzeige im Menü:** Zeigt das Hauptmenü oben rechts korrekt `SPIELBARER PROTOTYP · 0.2.0-preview.7` an?
 
 Nach der Bestätigung: Abschluss von Meilenstein 0.2 und Übergang zu Meilenstein 0.3 (Herne als Vertical Slice / Referenzkapitel mit vollständiger Bossbegegnung).
 
